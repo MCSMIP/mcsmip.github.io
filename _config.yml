@@ -1,0 +1,46 @@
+title: "MCSMIP"
+author: "MCSMIP"
+description: "Storm tracking community"
+permalink: /:title/
+lang: "en"
+excerpt_separator: "\n\n\n"
+date_format: "%B %d, %Y"
+
+# Dependencies
+markdown:         redcarpet
+highlighter:      pygments
+
+# Permalinks
+permalink:        pretty
+relative_permalinks: true
+
+# Setup
+title:            MCSMIP
+tagline:          'A cloud tracking intercomparison project'
+description:      'Mesoscale Convective Systems tracking Method Intercomparison'
+url:              http://hyde.getpoole.com
+baseurl:          /
+
+remote_theme: "pool/hyde"
+
+author:
+  name:           'Julia Kukulies'
+  url:            juliakukulies.github.io
+
+paginate:         5
+
+# Custom vars
+version:          2.1.0
+
+github:
+  repo:           https://github.com/poole/hyde
+
+# Menu
+navigation:                # accepts {file, title, url, icon, sidebaricon}
+  - {file: "index.html", title: "Home"}
+  - {file: "trackers.md", title: "Tracking algorithms"}
+  - {file: "idealized_cases.md", title: "Idealized cases"}
+  - {file: "datasets.md", title: "MCS datasets"}
+ 
+plugins:
+ - jekyll-feed
