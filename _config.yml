@@ -21,7 +21,7 @@ description:      'Mesoscale Convective Systems tracking Method Intercomparison'
 url:              http://hyde.getpoole.com
 baseurl:          /
 
-remote_theme: "pool/hyde"
+remote_theme: "poole/hyde"
 
 author:
   name:           'Julia Kukulies'
