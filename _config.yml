@@ -12,7 +12,7 @@ highlighter:      pygments
 
 # Permalinks
 permalink:        pretty
-relative_permalinks: true
+relative_permalinks: false
 
 # Setup
 title:            MCSMIP
@@ -25,7 +25,6 @@ remote_theme: "poole/hyde"
 
 author:
   name:           'Julia Kukulies'
-  url:            juliakukulies.github.io
 
 paginate:         5
 
@@ -44,4 +43,4 @@ navigation:                # accepts {file, title, url, icon, sidebaricon}
  
 plugins:
  - jekyll-feed
-  - jekyll-remote-theme  
+ - jekyll-remote-theme  
