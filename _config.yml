@@ -44,3 +44,4 @@ navigation:                # accepts {file, title, url, icon, sidebaricon}
  
 plugins:
  - jekyll-feed
+  - jekyll-remote-theme  
