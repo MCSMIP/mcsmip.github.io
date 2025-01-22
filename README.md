@@ -1,2 +1,8 @@
-# storm-tracking.github.io
-A webpage providing an overview of different tracking tools and existing datasets for convective storm systems 
+# mcsmip.github.io
+
+Webpage of the Mesoscale Convective Systems tracking Method Intercomparison (MCSMIP) project containing a description of
+
+* project goals
+* tracking algorithms
+* participants
+* publicly accessible data

@@ -1,6 +1,6 @@
 title: "MCSMIP"
 author: "MCSMIP"
-description: "Storm tracking community"
+description: "Mesoscale Convective Systems tracking Method Intercomparison"
 permalink: /:title/
 lang: "en"
 excerpt_separator: "\n\n\n"
@@ -28,19 +28,18 @@ author:
 
 paginate:         5
 
-# Custom vars
-version:          2.1.0
 
 github:
-  repo:           https://github.com/poole/hyde
+  repo:           https://github.com/WACCEM/MCSMIP-DYAMOND
 
 # Menu
 navigation:                # accepts {file, title, url, icon, sidebaricon}
   - {file: "index.html", title: "Home"}
+  - {file: "datasets.md", title: "Description of data"}
   - {file: "trackers.md", title: "Tracking algorithms"}
-  - {file: "idealized_cases.md", title: "Idealized cases"}
-  - {file: "datasets.md", title: "MCS datasets"}
- 
+  - {file: "publications.md", title: "Publications"}
+  - {file: "participants.md", title: "Participants"}
+  
 plugins:
  - jekyll-feed
  - jekyll-remote-theme  
