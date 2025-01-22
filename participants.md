@@ -1,7 +1,9 @@
-----
+---
 layout: page
 title: "Participants"
 ---
+
+list of participants
 
 * Zhe Feng (Pacific Northwest National Laboratory)
 * Andreas Franz Prein (ETH Zurich)
