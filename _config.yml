@@ -31,14 +31,6 @@ paginate:         5
 
 github:
   repo:           https://github.com/WACCEM/MCSMIP-DYAMOND
-
-# Menu
-navigation:                # accepts {file, title, url, icon, sidebaricon}
-  - {file: "index.html", title: "Home"}
-  - {file: "datasets.md", title: "Description of data"}
-  - {file: "trackers.md", title: "Tracking algorithms"}
-  - {file: "publications.md", title: "Publications"}
-  - {file: "participants.md", title: "Participants"}
   
 plugins:
  - jekyll-feed
