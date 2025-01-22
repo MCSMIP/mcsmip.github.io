@@ -10,23 +10,25 @@
     </div>
 
     <nav class="sidebar-nav">
+      <!-- Home Link: Ensure it's displayed only once -->
       <a class="sidebar-nav-item{% if page.url == site.baseurl %} active{% endif %}" href="{{ site.baseurl }}">Home</a>
 
       {% comment %}
         The code below dynamically generates a sidebar nav of pages with
-        `layout: page` in the front-matter. See readme for usage.
+        `layout: page` in the front-matter. We exclude the Home page (index.html) from this list.
       {% endcomment %}
 
       {% assign pages_list = site.pages %}
       {% for node in pages_list %}
         {% if node.title != null %}
-          {% if node.layout == "page" %}
+          {% if node.layout == "page" and node.url != site.baseurl %}
             <a class="sidebar-nav-item{% if page.url == node.url %} active{% endif %}" href="{{ node.url }}">{{ node.title }}</a>
           {% endif %}
         {% endif %}
       {% endfor %}
 
-      <a class="sidebar-nav-item" href="{{ site.github.repo }}">GitHub repo MCSMIP-DYAMOND</a>
+      <!-- GitHub repository link -->
+      <a class="sidebar-nav-item" href="{{ site.github.repo }}">GitHub repository for MCSMIP-DYAMOND</a>
     </nav>
 
     <p>&copy; {{ site.time | date: '%Y' }}.</p>
