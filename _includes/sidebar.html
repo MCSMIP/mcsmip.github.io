@@ -15,16 +15,19 @@
 
       {% comment %}
         Dynamically generate the sidebar nav, excluding:
-        - The landing page (index.html)
-        - Pages with the title "Mesoscale"
+        1. The Home page
+        2. The page with the title "Mesoscale" in it
       {% endcomment %}
 
       {% assign pages_list = site.pages %}
       {% for node in pages_list %}
         {% if node.title != null %}
           {% if node.layout == "page" %}
-            {% if node.url != site.baseurl and node.title != site.title and node.title contains "Mesoscale" == false %}
-              <a class="sidebar-nav-item{% if page.url == node.url %} active{% endif %}" href="{{ node.url }}">{{ node.title }}</a>
+            {% if node.url != site.baseurl and node.title != site.title %}
+              <!-- Exclude pages that contain 'Mesoscale' in their title -->
+              {% if node.title contains "Mesoscale" == false %}
+                <a class="sidebar-nav-item{% if page.url == node.url %} active{% endif %}" href="{{ node.url }}">{{ node.title }}</a>
+              {% endif %}
             {% endif %}
           {% endif %}
         {% endif %}
