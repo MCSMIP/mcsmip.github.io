@@ -28,7 +28,7 @@
                 <a class="sidebar-nav-item{% if page.url == node.url %} active{% endif %}" href="{{ node.url }}">{{ node.title }}</a>
 
                 {% comment %}
-                  If this page has subpages (i.e., it's a parent page like trackers), list those subpages
+                  Check if the page has subpages (tracking algorithms in this case)
                 {% endcomment %}
                 {% if node.title == "Tracking Algorithms" %}
                   <ul class="sub-links">
