@@ -5,7 +5,9 @@
 
   <body>
 
-    {% include sidebar.html %}
+    {% if page.url == site.baseurl %}
+      {% include sidebar.html %}
+    {% endif %}
 
     <div class="content container">
       {{ content }}
