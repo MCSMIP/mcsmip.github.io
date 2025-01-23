@@ -46,23 +46,24 @@ html {
 }
 
 
+
+
 /* Custom styles for sidebar sub-links under Tracking algorithms */
 .sidebar-nav .sub-links {
   list-style-type: none;  /* Remove bullet points */
   padding-left: 20px;     /* Indentation for the sub-links */
+  margin-top: 10px;       /* Add some margin for spacing */
 }
 
 .sidebar-nav .sub-link {
-  font-size: 14px;  /* Smaller font size */
-  color: white;     /* White text color */
-  text-decoration: none;  /* No underline */
+  font-size: 14px;        /* Smaller font size for sub-links */
+  color: white;           /* White text color */
+  text-decoration: none;  /* Remove underline */
 }
 
 .sidebar-nav .sub-link:hover {
-  color: #ffcc00;  /* Highlight color on hover */
+  color: #ffcc00;         /* Change color on hover */
 }
-
-
 
 
 /*
