@@ -1,36 +1,39 @@
-<div class="sidebar">
-  <div class="container sidebar-sticky">
-    <div class="sidebar-about">
-      <h1>
-        <a href="{{ site.baseurl }}">
-          {{ site.title }}
-        </a>
-      </h1>
-      <p class="lead">{{ site.description }}</p>
-    </div>
+{% if page.url == site.baseurl %}
+  <!-- Only show the sidebar on the landing page (index.html) -->
+  <div class="sidebar">
+    <div class="container sidebar-sticky">
+      <div class="sidebar-about">
+        <h1>
+          <a href="{{ site.baseurl }}">
+            {{ site.title }}
+          </a>
+        </h1>
+        <p class="lead">{{ site.description }}</p>
+      </div>
 
-    <nav class="sidebar-nav">
-      <!-- Home Link: Ensure it's displayed only once -->
-      <a class="sidebar-nav-item{% if page.url == site.baseurl %} active{% endif %}" href="{{ site.baseurl }}">Home</a>
+      <nav class="sidebar-nav">
+        <!-- Home Link: Ensure it's displayed only once -->
+        <a class="sidebar-nav-item{% if page.url == site.baseurl %} active{% endif %}" href="{{ site.baseurl }}">Home</a>
 
-      {% comment %}
-        The code below dynamically generates a sidebar nav of pages with
-        `layout: page` in the front-matter. We exclude the Home page (index.html) from this list.
-      {% endcomment %}
+        {% comment %}
+          The code below dynamically generates a sidebar nav of pages with
+          `layout: page` in the front-matter. We exclude the Home page (index.html) from this list.
+        {% endcomment %}
 
-      {% assign pages_list = site.pages %}
-      {% for node in pages_list %}
-        {% if node.title != null %}
-          {% if node.layout == "page" and node.url != site.baseurl %}
-            <a class="sidebar-nav-item{% if page.url == node.url %} active{% endif %}" href="{{ node.url }}">{{ node.title }}</a>
+        {% assign pages_list = site.pages %}
+        {% for node in pages_list %}
+          {% if node.title != null %}
+            {% if node.layout == "page" and node.url != site.baseurl %}
+              <a class="sidebar-nav-item{% if page.url == node.url %} active{% endif %}" href="{{ node.url }}">{{ node.title }}</a>
+            {% endif %}
           {% endif %}
-        {% endif %}
-      {% endfor %}
+        {% endfor %}
 
-      <!-- GitHub repository link -->
-      <a class="sidebar-nav-item" href="{{ site.github.repo }}">GitHub MCSMIP-DYAMOND</a>
-    </nav>
+        <!-- GitHub repository link -->
+        <a class="sidebar-nav-item" href="{{ site.github.repo }}">GitHub MCSMIP-DYAMOND</a>
+      </nav>
 
-    <p>&copy; {{ site.time | date: '%Y' }}.</p>
+      <p>&copy; {{ site.time | date: '%Y' }}.</p>
+    </div>
   </div>
-</div>
+{% endif %}
