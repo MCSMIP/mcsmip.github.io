@@ -22,8 +22,65 @@
 
   <!-- Icons -->
   <link rel="apple-touch-icon-precomposed" sizes="144x144" href="{{ site.baseurl }}public/apple-touch-icon-144-precomposed.png">
-                                 <link rel="shortcut icon" href="{{ site.baseurl }}public/favicon.ico">
+  <link rel="shortcut icon" href="{{ site.baseurl }}public/favicon.ico">
 
   <!-- RSS -->
   <link rel="alternate" type="application/rss+xml" title="RSS" href="/atom.xml">
+
+  <!-- Add custom styles for header navigation -->
+  <style>
+    /* Header navigation styling */
+    .header-nav {
+      background-color: black;  /* Set the background to black */
+      padding: 10px;  /* Add some padding for spacing */
+    }
+
+    .header-nav ul {
+      list-style-type: none;
+      margin: 0;
+      padding: 0;
+      display: flex;  /* Use flexbox to align the items horizontally */
+    }
+
+    .header-nav li {
+      margin-right: 20px;  /* Space between the items */
+    }
+
+    .header-link {
+      color: white;  /* Set the link color to white */
+      text-decoration: none;  /* Remove the default underline */
+      font-size: 16px;
+      padding: 5px;
+    }
+
+    .header-link:hover {
+      color: #ffcc00;  /* Change color on hover for better interactivity */
+    }
+  </style>
 </head>
+
+<body>
+  <header>
+    <div class="header-container">
+      <h1>
+        <a href="{{ site.baseurl }}">
+          {{ site.title }}
+        </a>
+      </h1>
+      <p class="lead">{{ site.description }}</p>
+
+      <!-- Navigation links -->
+      <nav class="header-nav">
+        <ul>
+          <!-- Dynamically list pages -->
+          {% assign pages_list = site.pages %}
+          {% for page in pages_list %}
+            {% if page.title != null and page.url != "/index.html" %}
+              <li><a href="{{ site.baseurl }}{{ page.url }}" class="header-link">{{ page.title }}</a></li>
+            {% endif %}
+          {% endfor %}
+        </ul>
+      </nav>
+    </div>
+  </header>
+</body>
