@@ -1,14 +1,10 @@
 <!DOCTYPE html>
 <html lang="en-us">
 
-  <!-- Include the head.html only if it is NOT the landing page (index.html) -->
-  {% unless page.url == "/" %}
-    {% include head.html %}
-  {% endunless %}
+  {% include head.html %}
 
   <body>
 
-    <!-- Sidebar will always show -->
     {% include sidebar.html %}
 
     <div class="content container">
