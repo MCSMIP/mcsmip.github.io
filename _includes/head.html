@@ -1,71 +1,89 @@
-ut icon" href="{{ site.baseurl }}public/favicon.ico">
+<head>
+  <link href="http://gmpg.org/xfn/11" rel="profile">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
 
-<!-- RSS -->
-<link rel="alternate" type="application/rss+xml" title="RSS" href="/atom.xml">
+  <!-- Enable responsiveness on mobile devices-->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
 
-<!-- Add custom styles for header navigation -->
-<style>
-  /* Header navigation styling */
-  .header-nav {
+  <title>
+    {% if page.title == "Home" %}
+      {{ site.title }} &middot; {{ site.tagline }}
+    {% else %}
+      {{ page.title }} &middot; {{ site.title }}
+    {% endif %}
+  </title>
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="{{ site.baseurl }}public/css/poole.css">
+  <link rel="stylesheet" href="{{ site.baseurl }}public/css/syntax.css">
+  <link rel="stylesheet" href="{{ site.baseurl }}public/css/hyde.css">
+  <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=PT+Sans:400,400italic,700|Abril+Fatface">
+
+  <!-- Icons -->
+  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="{{ site.baseurl }}public/apple-touch-icon-144-precomposed.png">
+  <link rel="shortcut icon" href="{{ site.baseurl }}public/favicon.ico">
+
+  <!-- RSS -->
+  <link rel="alternate" type="application/rss+xml" title="RSS" href="/atom.xml">
+
+  <!-- Add custom styles for header navigation -->
+  <style>
+    /* Header navigation styling */
+    .header-nav {
       background-color: black;  /* Set the background to black */
       padding: 10px;  /* Add some padding for spacing */
-  }
+    }
 
-  .header-nav ul {
+    .header-nav ul {
       list-style-type: none;
       margin: 0;
       padding: 0;
       display: flex;  /* Use flexbox to align the items horizontally */
-  }
+    }
 
-  .header-nav li {
+    .header-nav li {
       margin-right: 20px;  /* Space between the items */
-  }
+    }
 
-  .header-link {
+    .header-link {
       color: white;  /* Set the link color to white */
       text-decoration: none;  /* Remove the default underline */
-      font-size: 20px;  /* Increase font size */
+      font-size: 16px;
       padding: 5px;
-  }
+    }
 
-  .header-link:hover {
+    .header-link:hover {
       color: #ffcc00;  /* Change color on hover for better interactivity */
-  }
-</style>
+    }
+  </style>
 </head>
 
 <body>
   <!-- Ensure the header is only shown on subpages (not index.html) -->
   {% if page.url != "/" %}
-  <header>
-    <div class="header-container">
-      <h1>
-	<a href="{{ site.baseurl }}">
-	  {{ site.title }}
-	</a>
-      </h1>
-      <p class="lead">{{ site.description }}</p>
+    <header>
+      <div class="header-container">
+        <h1>
+          <a href="{{ site.baseurl }}">
+            {{ site.title }}
+          </a>
+        </h1>
+        <p class="lead">{{ site.description }}</p>
 
-      <!-- Navigation links -->
-      <nav class="header-nav">
-	<ul>
-	  <!-- Home Link: Include back to the landing page -->
-	  <li><a href="{{ site.baseurl }}" class="header-link">Home</a></li>
-
-	  <!-- Dynamically list pages excluding "Mesoscale" and pages like index.html -->
-	  {% assign pages_list = site.pages %}
-	  {% for page in pages_list %}
-	  {% if page.title != null and page.url != "/index.html" and page.url != "/404.html" and page.url != "/archive.html" %}
-	  {% if page.title != "Mesoscale" %}
-	  <li><a href="{{ site.baseurl }}{{ page.url }}" class="header-link">{{ page.title }}</a></li>
-	  {% endif %}
-	  {% endif %}
-	  {% endfor %}
-	</ul>
-      </nav>
-    </div>
-  </header>
+        <!-- Navigation links -->
+        <nav class="header-nav">
+          <ul>
+            <!-- Dynamically list pages -->
+            {% assign pages_list = site.pages %}
+            {% for page in pages_list %}
+              {% if page.title != null and page.url != "/index.html" and page.url != "/404.html" and page.url != "/archive.html" %}
+                <li><a href="{{ site.baseurl }}{{ page.url }}" class="header-link">{{ page.title }}</a></li>
+              {% endif %}
+            {% endfor %}
+          </ul>
+        </nav>
+      </div>
+    </header>
   {% endif %}
 </body>
-~
