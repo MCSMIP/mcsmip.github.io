@@ -14,19 +14,18 @@
       <a class="sidebar-nav-item{% if page.url == site.baseurl %} active{% endif %}" href="{{ site.baseurl }}">Home</a>
 
       {% comment %}
-        Only display subpage links on the landing page (index.html).
-        On subpages, we will hide these links.
+        The code below dynamically generates a sidebar nav of pages with
+        `layout: page` in the front-matter. We exclude the Home page (index.html) from this list.
       {% endcomment %}
-      {% if page.url == site.baseurl %}
-        {% assign pages_list = site.pages %}
-        {% for node in pages_list %}
-          {% if node.title != null %}
-            {% if node.layout == "page" and node.url != site.baseurl %}
-              <a class="sidebar-nav-item{% if page.url == node.url %} active{% endif %}" href="{{ node.url }}">{{ node.title }}</a>
-            {% endif %}
+
+      {% assign pages_list = site.pages %}
+      {% for node in pages_list %}
+        {% if node.title != null %}
+          {% if node.layout == "page" and node.url != site.baseurl %}
+            <a class="sidebar-nav-item{% if page.url == node.url %} active{% endif %}" href="{{ node.url }}">{{ node.title }}</a>
           {% endif %}
-        {% endfor %}
-      {% endif %}
+        {% endif %}
+      {% endfor %}
 
       <!-- GitHub repository link -->
       <a class="sidebar-nav-item" href="{{ site.github.repo }}">GitHub MCSMIP-DYAMOND</a>
