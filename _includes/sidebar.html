@@ -23,9 +23,9 @@
         {% if node.title != null %}
           {% if node.layout == "page" %}
             {% comment %}
-              Include only pages that do not have "Mesoscale" in their title.
+              Exclude links where the title contains "Mesoscale" and the link is the landing page (index).
             {% endcomment %}
-            {% if node.url != site.baseurl and node.title and node.title contains "Mesoscale" == false %}
+            {% if node.url != site.baseurl and node.title != site.title and node.title contains "Mesoscale" == false %}
               <a class="sidebar-nav-item{% if page.url == node.url %} active{% endif %}" href="{{ node.url }}">{{ node.title }}</a>
             {% endif %}
           {% endif %}
