@@ -14,17 +14,15 @@
       <a class="sidebar-nav-item{% if page.url == site.baseurl %} active{% endif %}" href="{{ site.baseurl }}">Home</a>
 
       {% comment %}
-        Dynamically generate the sidebar nav, excluding the Home link (landing page)
-        and excluding any links with "Mesoscale" in their title.
+        Dynamically generate the sidebar nav, excluding:
+        - The landing page (index.html)
+        - Pages with the title "Mesoscale"
       {% endcomment %}
 
       {% assign pages_list = site.pages %}
       {% for node in pages_list %}
         {% if node.title != null %}
           {% if node.layout == "page" %}
-            {% comment %}
-              Exclude links where the title contains "Mesoscale" and the link is the landing page (index).
-            {% endcomment %}
             {% if node.url != site.baseurl and node.title != site.title and node.title contains "Mesoscale" == false %}
               <a class="sidebar-nav-item{% if page.url == node.url %} active{% endif %}" href="{{ node.url }}">{{ node.title }}</a>
             {% endif %}
