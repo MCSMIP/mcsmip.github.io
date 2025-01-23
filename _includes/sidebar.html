@@ -15,14 +15,18 @@
 
       {% comment %}
         Dynamically generate the sidebar nav, excluding the Home link (landing page)
-        and avoid the duplicate link with the title of the landing page or the description.
+        and avoid the duplicate link with the title of the landing page or description.
+        We exclude pages whose titles contain the string 'Mesoscale', which is part of the landing page title.
       {% endcomment %}
 
       {% assign pages_list = site.pages %}
       {% for node in pages_list %}
         {% if node.title != null %}
           {% if node.layout == "page" %}
-            {% if node.url != site.baseurl and node.title != site.title %}  <!-- Exclude landing page and title -->
+            {% comment %}
+              Exclude pages with title starting with "Mesoscale" (e.g., landing page) from sidebar
+            {% endcomment %}
+            {% if node.url != site.baseurl and node.title contains "Mesoscale" == false %}
               <a class="sidebar-nav-item{% if page.url == node.url %} active{% endif %}" href="{{ node.url }}">{{ node.title }}</a>
             {% endif %}
           {% endif %}
