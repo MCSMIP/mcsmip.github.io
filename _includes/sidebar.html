@@ -29,21 +29,23 @@
               Here we check if the page is "trackers.md" (the parent) and display its sub-pages accordingly.
             {%- endcomment -%}
 
-            {% if node.url == "/trackers" %}
-              <a class="sidebar-nav-item{% if page.url == node.url %} active{% endif %}" href="{{ node.url }}">{{ node.title }}</a>
+            {% if node.url != site.baseurl %}
+              {% if node.url == "/trackers" %}
+                <a class="sidebar-nav-item{% if page.url == node.url %} active{% endif %}" href="{{ node.url }}">{{ node.title }}</a>
 
-              <ul class="sub-links">
-                {% for subpage in pages_list %}
-                  {% if subpage.parent == "trackers" %}
-                    <li><a href="{{ subpage.url }}" class="sub-link">{{ subpage.title }}</a></li>
-                  {% endif %}
-                {% endfor %}
-              </ul>
+                <!-- Display sub-pages (Tracking Algorithms) under Trackers -->
+                <ul class="sub-links">
+                  {% for subpage in pages_list %}
+                    {% if subpage.parent == "trackers" %}
+                      <li><a href="{{ subpage.url }}" class="sub-link">{{ subpage.title }}</a></li>
+                    {% endif %}
+                  {% endfor %}
+                </ul>
 
-            {% elsif node.url != site.baseurl %}
-              <a class="sidebar-nav-item{% if page.url == node.url %} active{% endif %}" href="{{ node.url }}">{{ node.title }}</a>
+              {% else %}
+                <a class="sidebar-nav-item{% if page.url == node.url %} active{% endif %}" href="{{ node.url }}">{{ node.title }}</a>
+              {% endif %}
             {% endif %}
-
           {% endif %}
         {% endif %}
       {% endfor %}
