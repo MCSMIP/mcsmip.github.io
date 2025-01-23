@@ -23,9 +23,22 @@
       {% for node in pages_list %}
         {% if node.title != null %}
           {% if node.layout == "page" %}
-            {% if node.url != site.baseurl and node.url != "/" %}
-              {% if node.title != site.title %}
+            {% if node.url != site.baseurl and node.title != site.title %}
+              {% if node.url != "/" %}
                 <a class="sidebar-nav-item{% if page.url == node.url %} active{% endif %}" href="{{ node.url }}">{{ node.title }}</a>
+
+                {% comment %}
+                  If this page has subpages (i.e., it's a parent page like trackers), list those subpages
+                {% endcomment %}
+                {% if node.title == "Tracking Algorithms" %}
+                  <ul class="sub-links">
+                    {% for subpage in pages_list %}
+                      {% if subpage.parent == node.title %}
+                        <li><a href="{{ site.baseurl }}{{ subpage.url }}" class="sub-link">{{ subpage.title }}</a></li>
+                      {% endif %}
+                    {% endfor %}
+                  </ul>
+                {% endif %}
               {% endif %}
             {% endif %}
           {% endif %}
