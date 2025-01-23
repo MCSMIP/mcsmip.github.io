@@ -1,6 +1,6 @@
 ---
 layout: page
-title: "Tracking algorithms"
+title: "tobac"
 parent: "trackers"
 ---
 
