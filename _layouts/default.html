@@ -5,8 +5,27 @@
 
   <body>
 
-    {% include sidebar.html %}
+    <!-- Include the sidebar only on the homepage (index.html) -->
+    {% if page.url == "/" %}
+      {% include sidebar.html %}
+    {% endif %}
 
+    <!-- Custom header with links (This will be shown on all subpages) -->
+    <header style="background-color: black; color: white;">
+      <div class="container">
+        <h1><a href="{{ site.baseurl }}" style="color: white;">{{ site.title }}</a></h1>
+        <nav>
+          <ul style="list-style: none; padding: 0; margin: 0; display: flex;">
+            <!-- Manually add the links to your subpages here -->
+            <li><a href="{{ site.baseurl }}/page1" style="color: white; padding-right: 15px;">Page 1</a></li>
+            <li><a href="{{ site.baseurl }}/page2" style="color: white; padding-right: 15px;">Page 2</a></li>
+            <li><a href="{{ site.baseurl }}/page3" style="color: white;">Page 3</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <!-- Content for the subpage -->
     <div class="content container">
       {{ content }}
     </div>
