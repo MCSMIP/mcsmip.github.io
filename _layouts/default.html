@@ -8,10 +8,8 @@
 
   <body>
 
-    <!-- Include the sidebar only on the homepage (index.html) -->
-    {% if page.url == "/" %}
-      {% include sidebar.html %}
-    {% endif %}
+    <!-- Sidebar will always be included (even on the landing page) -->
+    {% include sidebar.html %}
 
     <!-- Custom header with links (This will be shown on all subpages, but not the landing page) -->
     {% unless page.url == "/" %}
