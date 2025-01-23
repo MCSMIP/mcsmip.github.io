@@ -60,27 +60,29 @@
 </head>
 
 <body>
-  <header>
-    <div class="header-container">
-      <h1>
-        <a href="{{ site.baseurl }}">
-          {{ site.title }}
-        </a>
-      </h1>
-      <p class="lead">{{ site.description }}</p>
+  {% if page.url != "/index.html" and page.url != "/404.html" and page.url != "/archive.html" %}
+    <header>
+      <div class="header-container">
+        <h1>
+          <a href="{{ site.baseurl }}">
+            {{ site.title }}
+          </a>
+        </h1>
+        <p class="lead">{{ site.description }}</p>
 
-      <!-- Navigation links -->
-      <nav class="header-nav">
-        <ul>
-          <!-- Dynamically list pages -->
-          {% assign pages_list = site.pages %}
-          {% for page in pages_list %}
-            {% if page.title != null and page.url != "/index.html" %}
-              <li><a href="{{ site.baseurl }}{{ page.url }}" class="header-link">{{ page.title }}</a></li>
-            {% endif %}
-          {% endfor %}
-        </ul>
-      </nav>
-    </div>
-  </header>
+        <!-- Navigation links -->
+        <nav class="header-nav">
+          <ul>
+            <!-- Dynamically list pages -->
+            {% assign pages_list = site.pages %}
+            {% for page in pages_list %}
+              {% if page.title != null and page.url != "/index.html" and page.url != "/404.html" and page.url != "/archive.html" %}
+                <li><a href="{{ site.baseurl }}{{ page.url }}" class="header-link">{{ page.title }}</a></li>
+              {% endif %}
+            {% endfor %}
+          </ul>
+        </nav>
+      </div>
+    </header>
+  {% endif %}
 </body>
