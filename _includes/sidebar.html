@@ -14,8 +14,19 @@
       <a class="sidebar-nav-item{% if page.url == site.baseurl %} active{% endif %}" href="{{ site.baseurl }}">Home</a>
 
       {% comment %}
-        Removing the dynamic generation of links to other pages. The sidebar will only show Home and GitHub link.
+        Only display subpage links on the landing page (index.html).
+        On subpages, we will hide these links.
       {% endcomment %}
+      {% if page.url == site.baseurl %}
+        {% assign pages_list = site.pages %}
+        {% for node in pages_list %}
+          {% if node.title != null %}
+            {% if node.layout == "page" and node.url != site.baseurl %}
+              <a class="sidebar-nav-item{% if page.url == node.url %} active{% endif %}" href="{{ node.url }}">{{ node.title }}</a>
+            {% endif %}
+          {% endif %}
+        {% endfor %}
+      {% endif %}
 
       <!-- GitHub repository link -->
       <a class="sidebar-nav-item" href="{{ site.github.repo }}">GitHub MCSMIP-DYAMOND</a>
