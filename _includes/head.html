@@ -60,7 +60,8 @@
 </head>
 
 <body>
-  {% if page.url != "/index.html" %}
+  <!-- Ensure the header is only shown on subpages (not index.html) -->
+  {% if page.url != "/" %}
     <header>
       <div class="header-container">
         <h1>
