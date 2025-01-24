@@ -31,7 +31,7 @@
   <style>
     /* Header navigation styling */
     .header-nav {
-      background-color: darkgray;  /* Set the background to dark gray */
+      background-color: darkgray;  /* Set the background to black */
       padding: 20px;  /* Add some padding for spacing */
     }
 
@@ -74,60 +74,24 @@
       color: #777;  /* Lighter color for description */
     }
 
-    /* Ensure the header is only shown on subpages (not index.html) */
+    /* Ensure the header only shows on subpages (not index.html) */
     .subpage-header {
       display: block;
     }
-
     .landing-page-header {
       display: none;
-    }
-
-    /* Hide the extra text with title and description between the two sections */
-    .extra-header-text {
-      display: none; /* Hide this unwanted section */
     }
   </style>
 </head>
 
 <body>
-  <!-- Landing page header - hidden on subpages -->
-  {% if page.url == "/" %}
-    <div class="landing-page-title-description">
-      <h1>{{ site.title }}</h1>
-      <p>{{ site.description }}</p>
-    </div>
-    <header class="landing-page-header">
-      <div class="header-container">
-        <h1>
-          <a href="{{ site.baseurl }}">
-            {{ site.title }}
-          </a>
-        </h1>
-        <p class="lead">{{ site.description }}</p>
-        <nav class="header-nav">
-          <ul>
-            <!-- Include the "Home" link on subpages -->
-            <li><a href="{{ site.baseurl }}" class="header-link">Home</a></li>
-            <!-- Dynamically list pages excluding "Mesoscale..." page -->
-            {% assign pages_list = site.pages %}
-            {% for page in pages_list %}
-              {% if page.title != null and page.url != "/index.html" and page.url != "/404.html" and page.url != "/archive.html" %}
-                {% if page.title != "Mesoscale Convective Systems tracking Method Intercomparison (MCSMIP)" %}
-                  <li><a href="{{ site.baseurl }}{{ page.url }}" class="header-link">{{ page.title }}</a></li>
-                {% endif %}
-              {% endif %}
-            {% endfor %}
-          </ul>
-        </nav>
-      </div>
-    </header>
-  {% else %}
-    <!-- Subpage header with title and description centered above the header -->
+  <!-- Ensure the header is only shown on subpages (not index.html) -->
+  {% if page.url != "/" %}
     <div class="subpage-title-description">
       <h1>{{ site.title }}</h1>
       <p>{{ site.description }}</p>
     </div>
+
     <header class="subpage-header">
       <div class="header-container">
         <h1>
@@ -136,10 +100,13 @@
           </a>
         </h1>
         <p class="lead">{{ site.description }}</p>
+
+        <!-- Navigation links -->
         <nav class="header-nav">
           <ul>
             <!-- Include the "Home" link on subpages -->
             <li><a href="{{ site.baseurl }}" class="header-link">Home</a></li>
+
             <!-- Dynamically list pages excluding "Mesoscale..." page -->
             {% assign pages_list = site.pages %}
             {% for page in pages_list %}
