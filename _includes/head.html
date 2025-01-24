@@ -86,26 +86,26 @@
 
 <body>
   <!-- Ensure the header is only shown on subpages (not index.html) -->
-  {% if page.url != "/" %} 
+  {% if page.url != "/" %}
     <div class="subpage-title-description">
       <h1>{{ site.title }}</h1> 
       <p>{{ site.description }}</p>
-    </div> 
+    </div>
 
-    <!--<header class="subpage-header">
+    <header class="subpage-header">
       <div class="header-container">
         <h1>
           <a href="{{ site.baseurl }}">
             {{ site.title }}
           </a>
         </h1>
-        <p class="lead">{{ site.description }}</p> -->
+        <p class="lead">{{ site.description }}</p>
 
         <!-- Navigation links -->
         <nav class="header-nav">
           <ul>
             <!-- Include the "Home" link on subpages -->
-            <li><a href="{{ site.baseurl }}" class="header-link">Home</a></li>
+            <li><a href="{{ site.baseurl }}/index.html" class="header-link">Home</a></li>
 
             <!-- Dynamically list pages excluding "Mesoscale..." page -->
             {% assign pages_list = site.pages %}
