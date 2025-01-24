@@ -16,32 +16,15 @@
       {% comment %}
         Dynamically generate the sidebar nav, excluding:
         1. The Home page (landing page)
-        2. The page with the title "Mesoscale" (index.html title)
+        2. The page with the title "Mesoscale Convective Systems tracking Method Intercomparison (MCSMIP)"
       {% endcomment %}
 
       {% assign pages_list = site.pages %}
-      {% assign parent_page = "/trackers.md" %} <!-- Define trackers.md as the parent page -->
-
       {% for node in pages_list %}
         {% if node.title != null %}
           {% if node.layout == "page" %}
             {% if node.url != site.baseurl and node.title != site.title %}
-              <!-- Display trackers.md link -->
-              {% if node.url == parent_page %}
-                <a class="sidebar-nav-item{% if page.url == node.url %} active{% endif %}" href="{{ node.url }}">{{ node.title }}</a>
-
-                <ul class="sub-links">
-                  {% comment %} Now display subpages (sub-links) under trackers.md {% endcomment %}
-
-                  {% for subpage in pages_list %}
-                    {% if subpage.parent == "trackers.md" %}
-                      <li><a href="{{ subpage.url }}" class="sub-link">{% if page.url == subpage.url %} > {% endif %}{{ subpage.title }}</a></li>
-                    {% endif %}
-                  {% endfor %}
-
-                </ul>
-              {% else %}
-                <!-- Display other pages normally -->
+              {% if node.title != "Mesoscale Convective Systems tracking Method Intercomparison (MCSMIP)" %}
                 <a class="sidebar-nav-item{% if page.url == node.url %} active{% endif %}" href="{{ node.url }}">{{ node.title }}</a>
               {% endif %}
             {% endif %}
