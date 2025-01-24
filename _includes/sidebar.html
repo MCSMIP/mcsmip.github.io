@@ -10,39 +10,21 @@
     </div>
 
     <nav class="sidebar-nav">
-      <!-- Home Link -->
+      <!-- Home Link: Ensure it's displayed only once -->
       <a class="sidebar-nav-item{% if page.url == site.baseurl %} active{% endif %}" href="{{ site.baseurl }}">Home</a>
 
       {% comment %}
         Dynamically generate the sidebar nav, excluding:
         1. The Home page (landing page)
         2. The page with the title "Mesoscale" (index.html title)
-        3. Display subpages (sub-links) under "Trackers"
       {% endcomment %}
 
       {% assign pages_list = site.pages %}
       {% for node in pages_list %}
         {% if node.title != null %}
           {% if node.layout == "page" %}
-            
-            {%- comment -%}
-              Here we check if the page is "trackers.md" (the parent) and display its sub-pages accordingly.
-            {%- endcomment -%}
-
-            {% if node.url != site.baseurl %}
-              {% if node.url == "/trackers" %}
-                <a class="sidebar-nav-item{% if page.url == node.url %} active{% endif %}" href="{{ node.url }}">{{ node.title }}</a>
-
-                <!-- Display sub-pages (Tracking Algorithms) under Trackers -->
-                <ul class="sub-links">
-                  {% for subpage in pages_list %}
-                    {% if subpage.parent == "trackers" %}
-                      <li><a href="{{ subpage.url }}" class="sub-link">{{ subpage.title }}</a></li>
-                    {% endif %}
-                  {% endfor %}
-                </ul>
-
-              {% else %}
+            {% if node.url != site.baseurl and node.title != site.title %}
+              {% if node.url != "/" %}
                 <a class="sidebar-nav-item{% if page.url == node.url %} active{% endif %}" href="{{ node.url }}">{{ node.title }}</a>
               {% endif %}
             {% endif %}
