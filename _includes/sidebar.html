@@ -20,30 +20,29 @@
       {% endcomment %}
 
       {% assign pages_list = site.pages %}
+      {% assign parent_page = "/trackers.md" %} <!-- Define trackers.md as the parent page -->
+
       {% for node in pages_list %}
         {% if node.title != null %}
           {% if node.layout == "page" %}
             {% if node.url != site.baseurl and node.title != site.title %}
-              {% if node.url != "/" %}
+              <!-- Display trackers.md link -->
+              {% if node.url == parent_page %}
+                <a class="sidebar-nav-item{% if page.url == node.url %} active{% endif %}" href="{{ node.url }}">{{ node.title }}</a>
 
-                <!-- Check if it's the trackers.md page and handle subpages -->
-                {% if node.url == "/trackers" %}
-                  <a class="sidebar-nav-item{% if page.url == node.url %} active{% endif %}" href="{{ node.url }}">{{ node.title }}</a>
-                  
-                  <!-- Subpages under Trackers -->
-                  <ul class="sub-links">
-                    {% for subpage in pages_list %}
-                      {% if subpage.parent == "trackers" %}
-                        <li><a href="{{ subpage.url }}" class="sub-link">{{ subpage.title }}</a></li>
-                      {% endif %}
-                    {% endfor %}
-                  </ul>
+                <ul class="sub-links">
+                  {% comment %} Now display subpages (sub-links) under trackers.md %}
 
-                {% else %}
-                  <!-- Normal page link -->
-                  <a class="sidebar-nav-item{% if page.url == node.url %} active{% endif %}" href="{{ node.url }}">{{ node.title }}</a>
-                {% endif %}
+                  {% for subpage in pages_list %}
+                    {% if subpage.parent == "trackers.md" %}
+                      <li><a href="{{ subpage.url }}" class="sub-link">{% if page.url == subpage.url %} > {% endif %}{{ subpage.title }}</a></li>
+                    {% endif %}
+                  {% endfor %}
 
+                </ul>
+              {% else %}
+                <!-- Display other pages normally -->
+                <a class="sidebar-nav-item{% if page.url == node.url %} active{% endif %}" href="{{ node.url }}">{{ node.title }}</a>
               {% endif %}
             {% endif %}
           {% endif %}
@@ -57,4 +56,3 @@
     <p>&copy; {{ site.time | date: '%Y' }}.</p>
   </div>
 </div>
-
