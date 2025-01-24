@@ -74,11 +74,16 @@
         <!-- Navigation links -->
         <nav class="header-nav">
           <ul>
-            <!-- Dynamically list pages -->
+            <!-- Include the "Home" link on subpages -->
+            <li><a href="{{ site.baseurl }}" class="header-link">Home</a></li>
+
+            <!-- Dynamically list pages excluding "Mesoscale..." page -->
             {% assign pages_list = site.pages %}
             {% for page in pages_list %}
               {% if page.title != null and page.url != "/index.html" and page.url != "/404.html" and page.url != "/archive.html" %}
-                <li><a href="{{ site.baseurl }}{{ page.url }}" class="header-link">{{ page.title }}</a></li>
+                {% if page.title != "Mesoscale Convective Systems tracking Method Intercomparison (MCSMIP)" %}
+                  <li><a href="{{ site.baseurl }}{{ page.url }}" class="header-link">{{ page.title }}</a></li>
+                {% endif %}
               {% endif %}
             {% endfor %}
           </ul>
