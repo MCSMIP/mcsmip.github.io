@@ -25,7 +25,25 @@
           {% if node.layout == "page" %}
             {% if node.url != site.baseurl and node.title != site.title %}
               {% if node.url != "/" %}
-                <a class="sidebar-nav-item{% if page.url == node.url %} active{% endif %}" href="{{ node.url }}">{{ node.title }}</a>
+
+                <!-- Check if it's the trackers.md page and handle subpages -->
+                {% if node.url == "/trackers" %}
+                  <a class="sidebar-nav-item{% if page.url == node.url %} active{% endif %}" href="{{ node.url }}">{{ node.title }}</a>
+                  
+                  <!-- Subpages under Trackers -->
+                  <ul class="sub-links">
+                    {% for subpage in pages_list %}
+                      {% if subpage.parent == "trackers" %}
+                        <li><a href="{{ subpage.url }}" class="sub-link">{{ subpage.title }}</a></li>
+                      {% endif %}
+                    {% endfor %}
+                  </ul>
+
+                {% else %}
+                  <!-- Normal page link -->
+                  <a class="sidebar-nav-item{% if page.url == node.url %} active{% endif %}" href="{{ node.url }}">{{ node.title }}</a>
+                {% endif %}
+
               {% endif %}
             {% endif %}
           {% endif %}
@@ -39,3 +57,4 @@
     <p>&copy; {{ site.time | date: '%Y' }}.</p>
   </div>
 </div>
+
