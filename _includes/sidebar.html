@@ -31,7 +31,7 @@
                 <a class="sidebar-nav-item{% if page.url == node.url %} active{% endif %}" href="{{ node.url }}">{{ node.title }}</a>
 
                 <ul class="sub-links">
-                  {% comment %} Now display subpages (sub-links) under trackers.md %}
+                  {% comment %} Now display subpages (sub-links) under trackers.md {% endcomment %}
 
                   {% for subpage in pages_list %}
                     {% if subpage.parent == "trackers.md" %}
