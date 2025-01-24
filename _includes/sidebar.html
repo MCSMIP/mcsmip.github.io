@@ -1,16 +1,13 @@
 <div class="sidebar">
   <div class="container sidebar-sticky">
-    {% if page.url == site.baseurl %}
-      <!-- Show title and description only on the landing page -->
-      <div class="sidebar-about">
-        <h1>
-          <a href="{{ site.baseurl }}">
-            {{ site.title }}
-          </a>
-        </h1>
-        <p class="lead">{{ site.description }}</p>
-      </div>
-    {% endif %}
+    <div class="sidebar-about">
+      <h1>
+        <a href="{{ site.baseurl }}">
+          {{ site.title }}
+        </a>
+      </h1>
+      <p class="lead">{{ site.description }}</p>
+    </div>
 
     <nav class="sidebar-nav">
       <!-- Home Link: Ensure it's displayed only once -->
