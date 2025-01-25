@@ -176,11 +176,12 @@ a.sidebar-nav-item:focus {
 
 
 /* Ensure the sidebar content stays sticky */
-.sidebar-sticky {
-  position: sticky;
-  top: 0;
-  height: 100vh; /* Full viewport height */
-  padding-top: 20px; /* Add padding at the top */
+@media (min-width: 48 em) {
+    .sidebar-sticky {
+	position: sticky;
+	top: 0;
+	height: 100vh; /* Full viewport height */
+	padding-top: 20px; /* Add padding at the top */
 }
 
 /*@media (min-width: 48em) {
