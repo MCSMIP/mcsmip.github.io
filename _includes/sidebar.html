@@ -15,25 +15,26 @@
 
       {% comment %}
         Dynamically generate the sidebar nav, excluding:
-        1. The Home page (landing page)
-        2. The page with the title "Mesoscale Convective Systems tracking Method Intercomparison (MCSMIP)"
+        1. The page with the title "Mesoscale Convective Systems tracking Method Intercomparison (MCSMIP)"
       {% endcomment %}
 
       {% assign pages_list = site.pages | sort: 'order' %}
-      {% assign excluded_titles = "Mesoscale Convective Systems tracking Method Intercomparison (MCSMIP),Home" | split: "," %}
+      {% assign excluded_titles = "Mesoscale Convective Systems tracking Method Intercomparison (MCSMIP)" | split: "," %}
 
       <!-- Display parent pages and their children -->
       {% for node in pages_list %}
         {% unless excluded_titles contains node.title %}
-          {% if node.title != null and node.layout == "page" and node.url != site.baseurl %}
-            <!-- Display parent page -->
-            <a class="sidebar-nav-item{% if page.url == node.url %} active{% endif %}" href="{{ node.url }}">{{ node.title }}</a>
+          {% if node.title != null and node.layout == "page" %}
+            <!-- Display parent page if it doesn't have a parent -->
+            {% unless node.parent %}
+              <a class="sidebar-nav-item{% if page.url == node.url %} active{% endif %}" href="{{ node.url }}">{{ node.title }}</a>
 
-            <!-- Find and display child pages -->
-            {% assign child_pages = site.pages | where: "parent", node.title %}
-            {% for child in child_pages %}
-              <a class="sidebar-nav-item child-item{% if page.url == child.url %} active{% endif %}" href="{{ child.url }}">{{ child.title }}</a>
-            {% endfor %}
+              <!-- Find and display child pages -->
+              {% assign child_pages = site.pages | where: "parent", node.title | sort: 'order' %}
+              {% for child in child_pages %}
+                <a class="sidebar-nav-item child-item{% if page.url == child.url %} active{% endif %}" href="{{ child.url }}">{{ child.title }}</a>
+              {% endfor %}
+            {% endunless %}
           {% endif %}
         {% endunless %}
       {% endfor %}
