@@ -5,7 +5,7 @@ title: "Experimental design"
 
 # Intercomparison of tracking algorithms
 
-Existing storm tracking algorithms are based on different methodologies and therefore have different capabilities for tracking MCSs. Some trackers are specifically designed for MCS tracking, while others are general feature trackers that require post-processing. In this intercomparison project, we run eight different trackers with their preferred configuration to track convective clouds using infrared brightness temperatures (Tb) and surface precipitation. We identify MCSs using consistent criteria to highlight the differences between tracking methods that are independent on threshold choices and tracking criteria.
+Existing storm tracking algorithms are based on different methodologies and therefore have different capabilities for tracking MCSs. Some trackers are specifically designed for MCS tracking, while others are general feature trackers that require post-processing. In this intercomparison project, we run ten different trackers with their preferred configuration to track convective clouds using infrared brightness temperatures (Tb) and surface precipitation. We identify MCSs using consistent criteria to highlight the differences between tracking methods that are independent on threshold choices and tracking criteria.
 
 
 # Tracking criteria
