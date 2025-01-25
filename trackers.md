@@ -5,8 +5,9 @@ title: "Tracking algorithms"
 
 # Overview of Tracking algorithms
 
-|  **Name**     | **Spatial segmentation* | **Temporal linking method* | **Merging/splitting treatment** | **Programming language** | **Link** | 
+|  **Name**     | **Spatial segmentation** | **Temporal linking method** | **Merging/splitting treatment** | **Programming language** | **Link** | 
 |-------------|------------------------|---------------------------|-------------------------------|------------------------|--------|
+
 | [PyFLEXTRKR]({{ site.baseurl }}/pyflextrkrkr)    | 2D detect-and-spread cold core: Tb < 225 K, spread to Tb < 241 K     | Overlap (0.5)    | Yes    | Python     | [https://github.com/FlexTRKR/PyFLEXTRKR](https://github.com/FlexTRKR/PyFLEXTRKR) |
 | [simpleTrack]({{ site.baseurl }}/simpletrack)    | Threshold-connectivity Tb < 241 K     | Overlap (0.6)     | Yes     | Python     | [https://github.com/thmstein/simple-track](https://github.com/thmstein/simple-track) |
 | [TAMS]({{ site.baseurl }}/tams)    | Contour (polygon) Tb < 241 K     |  Overlap (0.5)    | Yes |  Python     |   [https://github.com/knubez/TAMS](https://github.com/knubez/TAMS/tree/main) |
