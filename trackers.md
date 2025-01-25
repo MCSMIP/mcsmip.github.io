@@ -9,7 +9,7 @@ title: "Tracking algorithms"
 |----------|----------|----------|----------|----------|----------|
 | [PyFLEXTRKR]({{ site.baseurl }}/pyflextrkrkr)    | 2D detect-and-spread cold core: Tb < 225 K, spread to Tb < 241 K     | Overlap (0.5)    | Yes    | Python     | [https://github.com/FlexTRKR/PyFLEXTRKR](https://github.com/FlexTRKR/PyFLEXTRKR) |
 | [simpleTrack]({{ site.baseurl }}/simpletrack)    | Threshold-connectivity Tb < 241 K     | Overlap (0.6)     | Yes     | Python     | [https://github.com/thmstein/simple-track](https://github.com/thmstein/simple-track) |
-| [TAMS])({{ site.baseurl }}/tams)    | Contour (polygon) Tb < 241 K     |  Overlap (0.5)    | Yes |  Python     |   [https://github.com/knubez/TAMS](https://github.com/knubez/TAMS/tree/main) |
+| [TAMS]({{ site.baseurl }}/tams)    | Contour (polygon) Tb < 241 K     |  Overlap (0.5)    | Yes |  Python     |   [https://github.com/knubez/TAMS](https://github.com/knubez/TAMS/tree/main) |
 | [DL + TempestExtreme]({{ site.baseurl }}/dl_tempest_extreme)    | Convolutional neural network (U-Net) Trained with PyFLEXTRKR data | Overlap (uses TempestExtremes) (0.5)    | No    | Python, C++     | [ https://github.com/mariajmolina/ML-extremes-mcs](https://github.com/mariajmolina/ML-extremes-mcs) |
 | [tobac]({{ site.baseurl }}/tobac)    | Water-shedding Tb < 241 K     | Parcels, propagation speed    |  Yes   | Python     | [https://github.com/tobac-project/tobac](https://github.com/tobac-project/tobac) |  
 | [KFyAO]({{ site.baseurl }}/kfyao)     | Threshold-connectivity Tb < 241 K     | Overlap and Kalman filter (0.15)    | No    | Matlab    |  |
