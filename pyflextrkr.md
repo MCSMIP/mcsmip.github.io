@@ -1,6 +1,7 @@
 ---
 layout: page
 title: "PyFLEXTRKR"
+parent: "trackers.md"
 ---
 
 ## [PyFLEXTRKR](https://github.com/FlexTRKR/PyFLEXTRKR)

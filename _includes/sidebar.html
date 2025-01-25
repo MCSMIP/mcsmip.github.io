@@ -19,30 +19,19 @@
         2. The page with the title "Mesoscale Convective Systems tracking Method Intercomparison (MCSMIP)"
       {% endcomment %}
 
-      {% assign pages_list = site.pages %}
-      {% assign parent_groups = site.pages | group_by_exp: "page", "page.parent" %}
+      {% assign pages_list = site.pages | sort: 'title' %}
+      {% assign parent_pages = pages_list | where: "parent", nil %}
+      {% assign child_pages = pages_list | where_exp: "item", "item.parent != nil" %}
 
-      {% for parent_group in parent_groups %}
-        {% assign parent_page = parent_group.name %}
-        
-        <!-- Only show parent pages -->
-        {% for node in parent_group.items %}
-          {% if node.layout == "page" and node.title != "Mesoscale Convective Systems tracking Method Intercomparison (MCSMIP)" %}
-            <!-- Show the parent page first -->
-            {% if node.parent == null %}
-              <a class="sidebar-nav-item{% if page.url == node.url %} active{% endif %}" href="{{ node.url }}">{{ node.title }}</a>
-
-              <!-- Show child pages under the parent page -->
-              {% for child in parent_group.items %}
-                {% if child.parent == node.title %}
-                  <a class="sidebar-nav-item sidebar-nav-item-child{% if page.url == child.url %} active{% endif %}" href="{{ child.url }}">
-                    &#160;&#160;&#160;{{ child.title }}
-                  </a>
-                {% endif %}
-              {% endfor %}
+      {% for parent in parent_pages %}
+        {% if parent.title != null and parent.layout == "page" and parent.url != site.baseurl and parent.title != site.title and parent.title != "Mesoscale Convective Systems tracking Method Intercomparison (MCSMIP)" %}
+          <a class="sidebar-nav-item{% if page.url == parent.url %} active{% endif %}" href="{{ parent.url }}">{{ parent.title }}</a>
+          {% for child in child_pages %}
+            {% if child.parent == parent.title %}
+              <a class="sidebar-nav-item child-item{% if page.url == child.url %} active{% endif %}" href="{{ child.url }}">{{ child.title }}</a>
             {% endif %}
-          {% endif %}
-        {% endfor %}
+          {% endfor %}
+        {% endif %}
       {% endfor %}
 
       <!-- GitHub repository link -->
