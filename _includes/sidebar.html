@@ -20,18 +20,17 @@
       {% endcomment %}
 
       {% assign pages_list = site.pages | sort: 'title' %}
-      {% assign parent_pages = pages_list | where: "parent", nil %}
       {% assign excluded_titles = "Mesoscale Convective Systems tracking Method Intercomparison (MCSMIP),Home" | split: "," %}
 
       <!-- Display parent pages and their children -->
-      {% for parent in parent_pages %}
-        {% unless excluded_titles contains parent.title %}
-          {% if parent.title != null and parent.layout == "page" and parent.url != site.baseurl %}
+      {% for node in pages_list %}
+        {% unless excluded_titles contains node.title %}
+          {% if node.title != null and node.layout == "page" and node.url != site.baseurl %}
             <!-- Display parent page -->
-            <a class="sidebar-nav-item{% if page.url == parent.url %} active{% endif %}" href="{{ parent.url }}">{{ parent.title }}</a>
+            <a class="sidebar-nav-item{% if page.url == node.url %} active{% endif %}" href="{{ node.url }}">{{ node.title }}</a>
 
             <!-- Find and display child pages -->
-            {% assign child_pages = pages_list | where: "parent", parent.title %}
+            {% assign child_pages = site.pages | where: "parent", node.title %}
             {% for child in child_pages %}
               <a class="sidebar-nav-item child-item{% if page.url == child.url %} active{% endif %}" href="{{ child.url }}">{{ child.title }}</a>
             {% endfor %}
