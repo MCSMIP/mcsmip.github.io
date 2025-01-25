@@ -4,8 +4,7 @@ title: "TAMS"
 parent: "trackers"
 ---
 
-## [TAMS](https://tams.readthedocs.io)
-
+# TAMS
 <img src="https://raw.githubusercontent.com/knubez/TAMS/main/docs/_static/TAMS-logo.png"
  alt="TAMS logo"
  width="200">
