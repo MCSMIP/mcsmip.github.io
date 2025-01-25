@@ -151,7 +151,7 @@ a.sidebar-nav-item:focus {
 .sidebar-nav-item.child-item {
     padding-left: 24px; /* Indent child items */
     font-size: 0.9em; /* Smaller font size for child items */
-    color: #660; /* # 666 Lighter color for child items */
+    color: #666; /* # 666 Lighter color for child items */
     font-style: italic; /* Italic font for child items (optional) */
     margin-top: 5px; /* Add spacing between child items */
 }
