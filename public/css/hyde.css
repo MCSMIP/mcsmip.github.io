@@ -88,36 +88,19 @@ html {
 }
 
 
-/* Style for the sidebar title */
-.sidebar-about h1 {
-  margin: 0;
-  font-size: 1.5em; /* Adjust font size as needed */
-  line-height: 1.2; /* Adjust line height for better readability */
-}
-
-/* Style for the sidebar description */
-.sidebar-about .lead {
-  margin: 10px 0 0; /* Add spacing around the description */
-  font-size: 1em; /* Adjust font size as needed */
-  color: #666; /* Optional: Change text color */
-}
-
-
 
 /* Sidebar links */
-/*.sidebar a {
+.sidebar a {
   color: #fff;
 }
 
 /* About section */
-/*.sidebar-about h1 {
+.sidebar-about h1 {
   color: #fff;
   margin-top: 0;
   font-family: "Abril Fatface", serif;
   font-size: 3.25rem;
 }
-
-
 
 /* Sidebar nav */
 .sidebar-nav {
