@@ -149,9 +149,9 @@ a.sidebar-nav-item:focus {
 /* Style for child items */
 
 .sidebar-nav-item.child-item {
-    padding-left: 25px; /* Indent child items */
-    font-size: 0.8em; /* Smaller font size for child items */
-    color: #666; /* Lighter color for child items */
+    padding-left: 24px; /* Indent child items */
+    font-size: 0.9em; /* Smaller font size for child items */
+    color: #c3dee3; /* # 666 Lighter color for child items */
     font-style: italic; /* Italic font for child items (optional) */
     margin-top: 5px; /* Add spacing between child items */
 }
@@ -174,9 +174,18 @@ a.sidebar-nav-item:focus {
  * contents to the bottom of the sidebar in tablets and up.
  */
 
-@media (min-width: 48em) {
+
+/* Ensure the sidebar content stays sticky */
+.sidebar-sticky {
+  position: sticky;
+  top: 0;
+  height: 100vh; /* Full viewport height */
+  padding-top: 20px; /* Add padding at the top */
+}
+
+/*@media (min-width: 48em) {
   .sidebar-sticky {
-    position: sticky;
+      position: sticky;
     right:  1rem;
     bottom: 1rem;
     left:   1rem;
