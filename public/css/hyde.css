@@ -62,6 +62,8 @@ html {
 
 
 
+
+
 /*
  * Sidebar
  *
@@ -99,6 +101,7 @@ html {
   font-size: 3.25rem;
 }
 
+
 /* Sidebar nav */
 .sidebar-nav {
   margin-bottom: 1rem;
@@ -114,6 +117,20 @@ a.sidebar-nav-item:focus {
 .sidebar-nav-item.active {
   font-weight: bold;
 }
+
+.sidebar-nav-item-child {
+  color: #666; /* Lighter color for sublinks */
+  font-size: 0.9em; /* Smaller font size */
+}
+
+.sidebar-nav-item-child:hover {
+  color: #007bff; /* Color change on hover */
+}
+
+.sidebar-nav-item-child.active {
+  font-weight: bold; /* Highlight the active sublink */
+}
+
 
 /* Sticky sidebar
  *

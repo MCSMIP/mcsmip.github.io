@@ -20,16 +20,29 @@
       {% endcomment %}
 
       {% assign pages_list = site.pages %}
-      {% for node in pages_list %}
-        {% if node.title != null %}
-          {% if node.layout == "page" %}
-            {% if node.url != site.baseurl and node.title != site.title %}
-              {% if node.title != "Mesoscale Convective Systems tracking Method Intercomparison (MCSMIP)" %}
-                <a class="sidebar-nav-item{% if page.url == node.url %} active{% endif %}" href="{{ node.url }}">{{ node.title }}</a>
-              {% endif %}
+      {% assign parent_groups = site.pages | group_by_exp: "page", "page.parent" %}
+
+      {% for parent_group in parent_groups %}
+        {% assign parent_page = parent_group.name %}
+        
+        <!-- Only show parent pages -->
+        {% for node in parent_group.items %}
+          {% if node.layout == "page" and node.title != "Mesoscale Convective Systems tracking Method Intercomparison (MCSMIP)" %}
+            <!-- Show the parent page first -->
+            {% if node.parent == null %}
+              <a class="sidebar-nav-item{% if page.url == node.url %} active{% endif %}" href="{{ node.url }}">{{ node.title }}</a>
+
+              <!-- Show child pages under the parent page -->
+              {% for child in parent_group.items %}
+                {% if child.parent == node.title %}
+                  <a class="sidebar-nav-item sidebar-nav-item-child{% if page.url == child.url %} active{% endif %}" href="{{ child.url }}">
+                    &#160;&#160;&#160;{{ child.title }}
+                  </a>
+                {% endif %}
+              {% endfor %}
             {% endif %}
           {% endif %}
-        {% endif %}
+        {% endfor %}
       {% endfor %}
 
       <!-- GitHub repository link -->
