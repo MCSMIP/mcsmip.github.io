@@ -18,7 +18,8 @@ Currently PyFLEXTRKR supports tracking:
 
 **Tracking** in PyFLEXTRKR primarily uses object overlap technique, with an option to use advection estimates (2D cross-correlation) to increase overlap probability. Largest overlap objects are tracked continuously, and smaller overlap objects are marked as merging/splitting.
 
-![](https://portal.nersc.gov/project/m1867/PyFLEXTRKR/figures/tracking_merging_splitting.png)
+<img src="https://portal.nersc.gov/project/m1867/PyFLEXTRKR/figures/tracking_merging_splitting.png" alt="Cover Image" style="max-width: 50%; height: auto;">
+
 
 **Reference**
 
