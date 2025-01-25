@@ -69,19 +69,24 @@ html {
  * out above content in mobile and later moves to the side with wider viewports.
  */
 
-/* Ensure the sidebar takes up the full height of the viewport */
-
 .sidebar {
-  height: 100vh; /* Full viewport height */
-  overflow-y: auto; /* Add scrollbar if content overflows */
-  position: fixed; /* Fix the sidebar in place */
-  top: 0;
-  left: 0;
-  width: 250px; /* Adjust width as needed */
-  background-color: #f8f9fa; /* Optional: Add background color */
-  padding: 20px; /* Add padding for spacing */
-  box-sizing: border-box; /* Include padding in the width */
+  text-align: center;
+  padding: 2rem 1rem;
+  color: rgba(255,255,255,.5);
+  background-color: #202020;
 }
+@media (min-width: 48em) {
+  .sidebar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    width: 18rem;
+    text-align: left;
+    overflow-y: auto; 
+  }
+}
+
 
 /* Style for the sidebar title */
 .sidebar-about h1 {
@@ -98,22 +103,6 @@ html {
 }
 
 
-/*.sidebar {
-  text-align: center;
-  padding: 2rem 1rem;
-  color: rgba(255,255,255,.5);
-  background-color: #202020;
-}
-@media (min-width: 48em) {
-  .sidebar {
-    position: fixed;
-    top: 0;
-    left: 0;
-    bottom: 0;
-    width: 18rem;
-    text-align: left;
-  }
-}
 
 /* Sidebar links */
 /*.sidebar a {
