@@ -1,7 +1,7 @@
 ---
 layout: page
 title: "ATRACKS"
-parent: "trackers"
+parent: "Tracking algorithms"
 order: 6
 ---
 

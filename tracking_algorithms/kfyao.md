@@ -1,7 +1,7 @@
 ---
 layout: page
 title: "KFyAO"
-parent: "trackers"
+parent: "Tracking algorithms"
 order: 11
 ---
 

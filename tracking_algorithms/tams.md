@@ -1,7 +1,7 @@
 ---
 layout: page
 title: "TAMS"
-parent: "trackers"
+parent: "Tracking algorithms"
 order: 14
 ---
 

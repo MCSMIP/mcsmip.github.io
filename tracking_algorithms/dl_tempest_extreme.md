@@ -1,6 +1,6 @@
 ---
 layout: page
 title: "DL + TempestExtreme"
-parent: "trackers"
+parent: "Tracking algorithms"
 order: 8
 ---

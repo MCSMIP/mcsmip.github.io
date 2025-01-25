@@ -1,7 +1,7 @@
 ---
 layout: page
 title: "MOAAP"
-parent: "trackers"
+parent: "Tracking algorithms"
 order: 12 
 ---
 

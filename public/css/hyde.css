@@ -62,8 +62,6 @@ html {
 
 
 
-
-
 /*
  * Sidebar
  *
@@ -119,9 +117,10 @@ a.sidebar-nav-item:focus {
 }
 
 /* Style for child items */
+
 .sidebar-nav-item.child-item {
-    padding-left: 20px; /* Indent child items */
-    font-size: 0.9em; /* Smaller font size for child items */
+    padding-left: 25px; /* Indent child items */
+    font-size: 0.8em; /* Smaller font size for child items */
     color: #666; /* Lighter color for child items */
     font-style: italic; /* Italic font for child items (optional) */
     margin-top: 5px; /* Add spacing between child items */

@@ -1,7 +1,7 @@
 ---
 layout: page
 title: "TIMPS"
-parent: "trackers"
+parent: "Tracking algorithms"
 order: 16
 ---
 

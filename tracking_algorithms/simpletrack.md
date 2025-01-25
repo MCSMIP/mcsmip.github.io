@@ -1,7 +1,7 @@
 ---
 layout: page
 title: "simpleTrack"
-parent: "trackers"
+parent: "Tracking algorithms"
 order: 13 
 ---
 

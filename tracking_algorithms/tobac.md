@@ -1,7 +1,7 @@
 ---
 layout: page
 title: "tobac"
-parent: "trackers"
+parent: "Tracking algorithms"
 order: 10 
 ---
 
