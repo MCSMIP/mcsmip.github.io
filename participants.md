@@ -1,6 +1,7 @@
 ---
 layout: page
 title: "Participants"
+order: 3
 ---
 
 Participants in MCSMIP-DYAMOND

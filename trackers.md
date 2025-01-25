@@ -1,6 +1,7 @@
 ---
 layout: page
 title: "Tracking algorithms"
+order: 5
 ---
 
 # Overview of Tracking algorithms

@@ -1,6 +1,7 @@
 ---
 layout: page
 title: "Experimental design"
+order: 1
 ---
 
 # Intercomparison of tracking algorithms

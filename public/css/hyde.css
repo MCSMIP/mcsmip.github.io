@@ -118,14 +118,19 @@ a.sidebar-nav-item:focus {
   font-weight: bold;
 }
 
-
+/* Style for child items */
 .sidebar-nav-item.child-item {
-  padding-left: 20px; /* Indent child items */
-  color: #666; /* Change color for child items */
+    padding-left: 20px; /* Indent child items */
+    font-size: 0.9em; /* Smaller font size for child items */
+    color: #666; /* Lighter color for child items */
+    font-style: italic; /* Italic font for child items (optional) */
+    margin-top: 5px; /* Add spacing between child items */
 }
 
+/* Style for active child items */
 .sidebar-nav-item.child-item.active {
-  color: #000; /* Active child item color */
+    color: #000; /* Darker color for active child items */
+    font-weight: bold; /* Bold font for active child items */
 }
 
 .sidebar-nav-item-child:hover {

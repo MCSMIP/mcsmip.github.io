@@ -2,6 +2,7 @@
 layout: page
 title: "PyFLEXTRKR"
 parent: "trackers"
+order: 9
 ---
 
 ## [PyFLEXTRKR](https://github.com/FlexTRKR/PyFLEXTRKR)
