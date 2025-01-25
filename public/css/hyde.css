@@ -69,7 +69,36 @@ html {
  * out above content in mobile and later moves to the side with wider viewports.
  */
 
+/* Ensure the sidebar takes up the full height of the viewport */
+
 .sidebar {
+  height: 100vh; /* Full viewport height */
+  overflow-y: auto; /* Add scrollbar if content overflows */
+  position: fixed; /* Fix the sidebar in place */
+  top: 0;
+  left: 0;
+  width: 250px; /* Adjust width as needed */
+  background-color: #f8f9fa; /* Optional: Add background color */
+  padding: 20px; /* Add padding for spacing */
+  box-sizing: border-box; /* Include padding in the width */
+}
+
+/* Style for the sidebar title */
+.sidebar-about h1 {
+  margin: 0;
+  font-size: 1.5em; /* Adjust font size as needed */
+  line-height: 1.2; /* Adjust line height for better readability */
+}
+
+/* Style for the sidebar description */
+.sidebar-about .lead {
+  margin: 10px 0 0; /* Add spacing around the description */
+  font-size: 1em; /* Adjust font size as needed */
+  color: #666; /* Optional: Change text color */
+}
+
+
+/*.sidebar {
   text-align: center;
   padding: 2rem 1rem;
   color: rgba(255,255,255,.5);
@@ -87,17 +116,18 @@ html {
 }
 
 /* Sidebar links */
-.sidebar a {
+/*.sidebar a {
   color: #fff;
 }
 
 /* About section */
-.sidebar-about h1 {
+/*.sidebar-about h1 {
   color: #fff;
   margin-top: 0;
   font-family: "Abril Fatface", serif;
   font-size: 3.25rem;
 }
+
 
 
 /* Sidebar nav */
@@ -146,7 +176,7 @@ a.sidebar-nav-item:focus {
 
 @media (min-width: 48em) {
   .sidebar-sticky {
-    position: absolute;
+    position: sticky;
     right:  1rem;
     bottom: 1rem;
     left:   1rem;
