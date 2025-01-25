@@ -118,18 +118,20 @@ a.sidebar-nav-item:focus {
   font-weight: bold;
 }
 
-.sidebar-nav-item-child {
-  color: #666; /* Lighter color for sublinks */
-  font-size: 0.9em; /* Smaller font size */
+
+.sidebar-nav-item.child-item {
+  padding-left: 20px; /* Indent child items */
+  color: #666; /* Change color for child items */
+}
+
+.sidebar-nav-item.child-item.active {
+  color: #000; /* Active child item color */
 }
 
 .sidebar-nav-item-child:hover {
   color: #007bff; /* Color change on hover */
 }
 
-.sidebar-nav-item-child.active {
-  font-weight: bold; /* Highlight the active sublink */
-}
 
 
 /* Sticky sidebar
