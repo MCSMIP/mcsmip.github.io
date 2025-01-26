@@ -6,7 +6,7 @@ order: 5
 
 |  **Name**     | **Spatial segmentation** | **Temporal linking method** | **Merging/splitting treatment** | **Programming language** | **Link** | 
 |-------------|------------------------|---------------------------|-------------------------------|------------------------|--------|
-| [PyFLEXTRKR]({{ site.baseurl }}/ttracking_algorithms/pyflextrkrkr)    | 2D detect-and-spread cold core: Tb<225K, spread to Tb < 241 K     | Overlap (0.5)    | Yes    | Python     | [https://github.com/FlexTRKR/PyFLEXTRKR](https://github.com/FlexTRKR/PyFLEXTRKR) |
+| [PyFLEXTRKR]({{ site.baseurl }}/tracking_algorithms/pyflextrkr)    | 2D detect-and-spread cold core: Tb<225K, spread to Tb < 241 K     | Overlap (0.5)    | Yes    | Python     | [https://github.com/FlexTRKR/PyFLEXTRKR](https://github.com/FlexTRKR/PyFLEXTRKR) |
 | [simpleTrack]({{ site.baseurl }}/tracking_algorithms/simpletrack)    | Threshold-connectivity Tb<241K     | Overlap (0.6)     | Yes     | Python     | [https://github.com/thmstein/simple-track](https://github.com/thmstein/simple-track) |
 | [TAMS]({{ site.baseurl }}/tracking_algorithms/tams)    | Contour (polygon) Tb<241K     |  Overlap (0.5)    | Yes |  Python     |   [https://github.com/knubez/TAMS](https://github.com/knubez/TAMS/tree/main) |
 | [DL + TempestExtreme]({{ site.baseurl }}/tracking_algorithms/dl_tempest_extreme)    | Convolutional neural network (U-Net) Trained with PyFLEXTRKR data | Overlap (uses TempestExtremes) (0.5)    | No    | Python, C++     | [ https://github.com/mariajmolina/ML-extremes-mcs](https://github.com/mariajmolina/ML-extremes-mcs) |
