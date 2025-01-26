@@ -3,6 +3,8 @@ layout: page
 title: "Mesoscale Convective Systems tracking Method Intercomparison (MCSMIP)"
 ---
 
+<!DOCTYPE html>
+<html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -11,42 +13,57 @@ title: "Mesoscale Convective Systems tracking Method Intercomparison (MCSMIP)"
     .indent-text {
       padding-left: 30px; /* Adjust the value to increase/decrease indentation */
     }
+
+    .figure-container {
+      text-align: center; /* Center the image and caption */
+      margin: 20px 0; /* Add some space around the figure */
+    }
+
+    .figure-container img {
+      display: block; /* Ensure the image is centered */
+      margin: 0 auto; /* Center the image horizontally */
+    }
+
+    .figure-caption {
+      font-size: 0.9em; /* Smaller font size for the caption */
+      color: #555; /* Slightly lighter color for the caption */
+      margin-top: 5px; /* Space between the image and caption */
+    }
   </style>
 </head>
 <body>
   <div class="indent-text">
     <p>
-Mesoscale convective systems (MCSs) are large complexes of convective clouds that stretch over at least hundred km horizontally and can last for several hours or even more than a day. Decades of research, field studies, and improvements in remote sensing technology, along with advanced modeling and theories, have helped us understand the structure, development, and effects of MCSs on weather and climate. MCSs are responsible for more than half of the rainfall in tropical regions and many midlatitude areas. 
-</p>
+      Mesoscale convective systems (MCSs) are large complexes of convective clouds that stretch over at least hundred km horizontally and can last for several hours or even more than a day. Decades of research, field studies, and improvements in remote sensing technology, along with advanced modeling and theories, have helped us understand the structure, development, and effects of MCSs on weather and climate. MCSs are responsible for more than half of the rainfall in tropical regions and many midlatitude areas.
+    </p>
   </div>
-</body>
 
-<p style="text-align:center;"><img src="mcs.jpg" alt="picture" width="1000" height="400" class="center"></p>
+  <!-- First Figure with Caption -->
+  <div class="figure-container">
+    <img src="mcs.jpg" alt="Mesoscale Convective System" width="1000" height="400">
+    <div class="figure-caption">
+      Example snapshots of cold clouds (Tb < 241K, white shading) and precipitation (color shading) from global satellite observations at 13 UTC on 5 February 2020. </div>
+  </div>
 
-<p align="justify">
-   
-</p>
-
-<!-- Main Section -->
-<section>
-  <h1>What is the goal of MCSMIP?</h1>
-<body>
   <div class="indent-text">
-    <p>  The Mesoscale Convective Systems tracking Method Intercomparison (MCSMIP) is a collaborative, international initiative that brings together researchers from universities, laboratories, and agencies around the world. Our mission is to deepen our understanding of mesoscale convective systems (MCSs) and their influence on global weather and climate, in particular how different tracking methods affect these conclusions. We do this by leveraging advanced satellite data and high-resolution model simulations.
+    <h1>What is the goal of MCSMIP?</h1>
+    <p>
+      The Mesoscale Convective Systems tracking Method Intercomparison (MCSMIP) is a collaborative, international initiative that brings together researchers from universities, laboratories, and agencies around the world. Our mission is to deepen our understanding of mesoscale convective systems (MCSs) and their influence on global weather and climate, in particular how different tracking methods affect these conclusions. We do this by leveraging advanced satellite data and high-resolution model simulations.
+    </p>
+    <p>
+      To achieve this, we quantify the sensitivities and uncertainties that arise from using different tracking algorithms. By examining various tracking methods and criteria, we aim to better understand how different approaches affect key MCS characteristics, such as their lifetime, frequency, and size.
+    </p>
+  </div>
 
-To achieve this, we quantify the sensitivities and uncertainties that arise from using different tracking algorithms. By examining various tracking methods and criteria, we aim to better understand how different approaches affect key MCS characteristics, such as their lifetime, frequency, and size.
-
-</p>
+  <!-- Second Figure with Caption -->
+  <div class="figure-container">
+    <img src="mcs-rain.jpg" alt="MCS Rainfall" width="1000" height="400">
+    <div class="figure-caption">
+      Comparisons of observed MCS contribution to total precipitation quantified by different tracking algorithms. Global distribution of MCS contribution to total precipitation for (a) summer and (b) winter based on results from PyFLEXTRKR. Regional mean values of the trackers are shown in (c) summer and (d) winter, and global (60°S-60°N) mean values are shown in (e) summer and (f) winter. Subregions: WP (West Pacific), ITCZ (Intertropical Convergence Zone), IO (Indian Ocean), AO (Atlantic Ocean), AFC (Africa), SAM (South Asian Monsoon), CUS (Central U.S.), AMZ (Amazon); and in (cb),(d): MC (Maritime Continent), ITCZ, SPCZ (South Pacific Convergence Zone), IO, AO, AFC, AMZ, and SES (Southeast South America).
+    </div>
   </div>
 </body>
-<p align="justify">
-
-
-<p style="text-align:center;"><img src="mcs-rain.jpg" alt="picture" width="1000" height="400" class="center"></p>
-
-<p align="justify">
-   
-</p>
+</html>
 
 
 

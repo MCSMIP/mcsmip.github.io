@@ -7,7 +7,7 @@ order: 3
 <style>
   /* Increase font size for this page only */
   body {
-    font-size: 22px; /* Adjust this value as needed */
+    font-size: 21px; /* Adjust this value as needed */
   }
 
   /* Optionally, target specific elements */
@@ -21,8 +21,7 @@ order: 3
 </style>
 
 
-
-# Participants in MCSMIP-DYAMOND
+### MCSMIP-DYAMOND
 
 * [Zhe Feng](https://orcid.org/0000-0002-7540-9017)
 * [Andreas Franz Prein](https://orcid.org/0000-0001-6250-179X)
