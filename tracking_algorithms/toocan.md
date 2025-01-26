@@ -1,6 +1,6 @@
 ---
 layout: page
-title: "toocan"
+title: "TOOCAN"
 parent: "Tracking algorithms"
 order: 8
 ---
