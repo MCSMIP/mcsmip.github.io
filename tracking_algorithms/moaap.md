@@ -2,7 +2,7 @@
 layout: page
 title: "MOAAP"
 parent: "Tracking algorithms"
-order: 12 
+order: 7 
 ---
 
 <style>

@@ -2,7 +2,7 @@
 layout: page
 title: "PyFLEXTRKR"
 parent: "Tracking algorithms"
-order: 9
+order: 6
 ---
 
 <style>

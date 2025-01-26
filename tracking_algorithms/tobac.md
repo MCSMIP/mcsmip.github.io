@@ -2,7 +2,7 @@
 layout: page
 title: "tobac"
 parent: "Tracking algorithms"
-order: 10 
+order: 9
 ---
 
 <style>

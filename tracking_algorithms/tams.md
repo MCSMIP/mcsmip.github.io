@@ -2,7 +2,7 @@
 layout: page
 title: "TAMS"
 parent: "Tracking algorithms"
-order: 14
+order: 10
 ---
 
 <img src="https://raw.githubusercontent.com/knubez/TAMS/main/docs/_static/TAMS-logo.png"

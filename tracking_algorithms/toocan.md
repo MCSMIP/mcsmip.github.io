@@ -2,7 +2,7 @@
 layout: page
 title: "toocan"
 parent: "Tracking algorithms"
-order: 15 
+order: 8
 ---
 <style>
   /* Increase font size for this page only */

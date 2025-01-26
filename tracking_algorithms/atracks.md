@@ -2,7 +2,7 @@
 layout: page
 title: "ATRACKS"
 parent: "Tracking algorithms"
-order: 6
+order: 12
 ---
 
 <style>
