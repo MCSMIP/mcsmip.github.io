@@ -4,7 +4,25 @@ title: "Participants"
 order: 3
 ---
 
-Participants in MCSMIP-DYAMOND
+<style>
+  /* Increase font size for this page only */
+  body {
+    font-size: 22px; /* Adjust this value as needed */
+  }
+
+  /* Optionally, target specific elements */
+  h1 {
+    font-size: 2.5em;
+  }
+
+  p {
+    font-size: 1.2em;
+  }
+</style>
+
+
+
+# Participants in MCSMIP-DYAMOND
 
 * [Zhe Feng](https://orcid.org/0000-0002-7540-9017)
 * [Andreas Franz Prein](https://orcid.org/0000-0001-6250-179X)
