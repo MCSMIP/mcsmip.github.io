@@ -12,7 +12,7 @@ The main contents of the webpage are:
 * description of publicly accessible datasets (datasets.md)
 * participant list (participants.md)
 * publication list (publications.md)
-* description of tracking algorithms (trackers.md)
+* overview and description of tracking algorithms (trackers.md)
 
 ## Contributing to the homepage 
 
@@ -26,13 +26,13 @@ This homepage was built with [GitHub pages](https://docs.github.com/en/pages). T
 
 ├── public/css/
 
-│   └── hyde.css        # CSS files for styling
+    │   └── hyde.css        # CSS files for styling
 
 ├── _include
 
-│   └── sidebar.html        # HTML rendering of sidebar on landing page
+    │   └── sidebar.html        # HTML rendering of sidebar on landing page
 
-│   └── head.html        # HTML rendering of navigation bar on subpages
+    │   └── head.html        # HTML rendering of navigation bar on subpages
 
 ├── _config.yml         # Configuration file with main setting and Jekyll theme
 
