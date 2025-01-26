@@ -5,7 +5,25 @@ parent: "Tracking algorithms"
 order: 10 
 ---
 
-# tobac 
+<style>
+  /* Increase font size for this page only */
+  body {
+    font-size: 21px; /* Adjust this value as needed */
+  }
+
+  /* Optionally, target specific elements */
+  h1 {
+    font-size: 2.5em;
+  }
+
+  p {
+    font-size: 1.2em;
+  }
+</style>
+
+
+*tobac* (Tracking and Object-based Analysis of Clodus) is a scientific Python package for detecting, tracking, and analyzing clouds and other atmospheric phenomena. tobac is unique in its ability to track phenomena using **any variable** on **any grid**, including radar data, satellite observations, and numerical model output. Due to its modular and flexible design, tobac is a general toolset that can be used for tracking all kinds of atmosheric phenomena related to storm formation, from small scales (e.g. updrafts) to large scales (e.g. atmospheric rivers).
+
 
 The main elements of *tobac* are:
 

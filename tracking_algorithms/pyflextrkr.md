@@ -5,9 +5,24 @@ parent: "Tracking algorithms"
 order: 9
 ---
 
-## [PyFLEXTRKR](https://github.com/FlexTRKR/PyFLEXTRKR)
+<style>
+  /* Increase font size for this page only */
+  body {
+    font-size: 21px; /* Adjust this value as needed */
+  }
 
----
+  /* Optionally, target specific elements */
+  h1 {
+    font-size: 2.5em;
+  }
+
+  p {
+    font-size: 1.2em;
+  }
+</style>
+
+
+
 The Python FLEXible object TRacKeR (PyFLEXTRKR) is a flexible atmospheric feature tracking software package. The software can track any 2D objects and handle merging and splitting explicitly. PyFLEXTRKR has specific capabilities to track convective clouds from a variety of observations and model simulations. The package uses Dask for scalable parallelization and has been optimized to work on large datasets including global kilometer-scale data. PyFLEXTRKR uses Xarray for I/O and writes netCDF files as tracking outputs.
 
 Currently PyFLEXTRKR supports tracking: 
@@ -16,12 +31,11 @@ Currently PyFLEXTRKR supports tracking:
 2. Mesoscale convective systems (MCSs), 
 3. General atmospheric objects defined by customizable feature identification functions.
 
-<img src="https://portal.nersc.gov/project/m1867/PyFLEXTRKR/figures/cover_image.png" alt="Cover Image" style="max-width: 50%; height: auto;">
+<img src="https://portal.nersc.gov/project/m1867/PyFLEXTRKR/figures/cover_image.png" alt="Cover Image" style="max-width: 70%; height: auto;">
 
 **Tracking** in PyFLEXTRKR primarily uses object overlap technique, with an option to use advection estimates (2D cross-correlation) to increase overlap probability. Largest overlap objects are tracked continuously, and smaller overlap objects are marked as merging/splitting.
 
-<img src="https://portal.nersc.gov/project/m1867/PyFLEXTRKR/figures/tracking_merging_splitting.png" alt="Cover Image" style="max-width: 50%; height: auto;">
-
+<img src="https://portal.nersc.gov/project/m1867/PyFLEXTRKR/figures/tracking_merging_splitting.png" alt="Cover Image" style="max-width: 70%; height: auto;">
 
 **Reference**
 

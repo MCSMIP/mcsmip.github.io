@@ -5,7 +5,6 @@ parent: "Tracking algorithms"
 order: 14
 ---
 
-# TAMS
 <img src="https://raw.githubusercontent.com/knubez/TAMS/main/docs/_static/TAMS-logo.png"
  alt="TAMS logo"
  width="200">

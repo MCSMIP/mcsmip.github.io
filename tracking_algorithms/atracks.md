@@ -5,35 +5,23 @@ parent: "Tracking algorithms"
 order: 6
 ---
 
-## [TAMS](https://tams.readthedocs.io)
+<style>
+  /* Increase font size for this page only */
+  body {
+    font-size: 21px; /* Adjust this value as needed */
+  }
 
-<img src="https://raw.githubusercontent.com/knubez/TAMS/main/docs/_static/TAMS-logo.png"
- alt="TAMS logo"
- width="200">
+  /* Optionally, target specific elements */
+  h1 {
+    font-size: 2.5em;
+  }
 
-**TAMS** (**T**racking **A**lgorithm for **M**esoscale Convective **S**ystems) is an MCS tracker and classifier. TAMS was [originally developed](https://doi.org/10.1175/MWR-D-19-0070.1) for tracking and analyzing MCSs associated with African easterly waves (AEWs). The currently developed TAMS is a scientific Python package. **TAMS** uses the [GeoPandas dataframe](https://geopandas.org/en/stable/docs/reference/api/geopandas.GeoDataFrame.html) data structure to store polygon shapes of the elements to be tracked. It is a grid-independent MCS identifier and tracker, and as such, it can be applied for both simulated and observed MCSs. It is available to be installed via pip or conda/mamba. 
+  p {
+    font-size: 1.2em;
+  }
+</style>
 
-**TAMS** has four main steps: 
+The Algorithm for TRACKing Convective Systems (ATRACKCS, Robledo et al. (2024)) is an open access Python package for the detection and tracking of MCSs. ATRACKCS identifies cold cloud systems using a predefined Tb threshold and converts them into polygons. The algorithm then uses precipitation data to filter out non-precipitating systems. To assign different polygons to the same track in time, ATRACKCS uses a predefined threshold of overlapping area in consecutive times. To deal with the splitting and merging of systems, if multiple systems overlap at the same timestep, ATRACKCS evaluates which systems satisfy the identification criteria and then selects the one with the higher overlapping area to the previous time step to continue the track; the remaining systems are tracked as new ones if satisfy the thresholds. ATRACKCS can be accessed at [https://doi.org/10.5281/zenodo.7025989](https://doi.org/10.5281/zenodo.7025989).
 
-1. **Identify**- Through Xarray or Pandas, cloud elements (CEs) that are MCS candidates via default criteria are identified through temperature thresholds (if using satellite data) or cloud top temperature proxy (model data) 
-2. **Tracking**- Overlap method and optional cloud projection in the x direction
-3. **Classification**- Based on default criteria considering shape, size, and duration, each MCS is classified into one of four possible categories 
-4. **Assignment of rainfall (or variable of choice)**- Through the use of the helper function 'tams.data_in_contours', a variable of choice can be added to each CE in order to study the MCS evolution across different statistical analysis and atmospheric variables 
 
-Currently, **Identify**, **Assignment**, and some post-processing can be done in parallel.
 
-**Settings**
-
-Users can choose outer and core thresholds of CEs for object detection, optionally define zonal projection velocity, and choose the % overlap threshold for time matching.
-
-**Helper functions and utilities**
-
- Users can use the eccentricity calculation function as a measure of the MCS shape. Other functions include plotting MCS tracks, loading sample [MSG](https://www.eumetsat.int/0-degree-service) ch9 satellite data, and [MPAS](https://mpas-dev.github.io/) data. Jupyter Notebooks and examples are available for calculating brightness temperature from EUMETSAT, MPAS Cloud Top Temperature from OLR, and others.
-
-**References**
-
-Kelly M. Núñez Ocasio, Jenni L. Evans, and George S. Young. Tracking Mesoscale Convective Systems that are Potential Candidates for Tropical Cyclogenesis. Monthly Weather Review, 148(2):655 – 669, Feb 2020. URL: [https://journals.ametsoc.org/view/journals/mwre/148/2/mwr-d-19-0070.1.xml], (doi:10.1175/MWR-D-19-0070.1).
-
-Kelly M. Núñez Ocasio, Jenni L. Evans, and George S. Young. A Wave-Relative Framework Analysis of AEW–MCS Interactions Leading to Tropical Cyclogenesis. Monthly Weather Review, 148(11):4657 – 4671, Nov 2020. URL: [https://journals.ametsoc.org/view/journals/mwre/148/11/MWR-D-20-0152.1.xml], (doi:10.1175/MWR-D-20-0152.1).
-
-## MOAAP 
