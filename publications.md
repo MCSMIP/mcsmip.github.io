@@ -34,7 +34,7 @@ order: 4
 
 <div class="publication-block">
   <h3>2023</h3>
-  <p> Feng, Z.,  Prein, A., Kukulies, J., Fiolleau, T., Jones, W., Maybee, B., Moon, Z. L., Núñez Ocasio, K. M., Dong, W., Molina, M. J., Albright, M. J., Feng, R., Song, J., Song, F., Leung, R., Varble, A. C., Klein, C., Roca, R (2024). Mesoscale Convective Systems tracking Method Intercomparison (MCSMIP): Application to DYAMOND Global km-scale Simulations. JGR Atmosphere. <a href="https://doi.org/10.22541/essoar.172405876.67413040/v1">DOI</a>
+  <p> Feng, Z.,  Prein, A., Kukulies, J., Fiolleau, T., Jones, W., Maybee, B., Moon, Z. L., Núñez Ocasio, K. M., Dong, W., Molina, M. J., Albright, M. J., Feng, R., Song, J., Song, F., Leung, R., Varble, A. C., Klein, C., Roca, R (2024). Mesoscale Convective Systems tracking Method Intercomparison (MCSMIP): Application to DYAMOND Global km-scale Simulations. JGR Atmosphere. <a href="https://doi.org/10.22541/essoar.172405876.67413040/v1">Preprint</a>
   </p>
 </div>
 

@@ -4,8 +4,6 @@ title: "Tracking algorithms"
 order: 5
 ---
 
-# Overview of Tracking algorithms
-
 |  **Name**     | **Spatial segmentation** | **Temporal linking method** | **Merging/splitting treatment** | **Programming language** | **Link** | 
 |-------------|------------------------|---------------------------|-------------------------------|------------------------|--------|
 | [PyFLEXTRKR]({{ site.baseurl }}/ttracking_algorithms/pyflextrkrkr)    | 2D detect-and-spread cold core: Tb<225K, spread to Tb < 241 K     | Overlap (0.5)    | Yes    | Python     | [https://github.com/FlexTRKR/PyFLEXTRKR](https://github.com/FlexTRKR/PyFLEXTRKR) |
