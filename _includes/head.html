@@ -92,33 +92,25 @@
       <p>{{ site.description }}</p>
     </div>
 
-   <!-- <header class="subpage-header">
-      <div class="header-container">
-        <h1>
-          <a href="{{ site.baseurl }}">
-            {{ site.title }}
-          </a>
-        </h1>
-        <p class="lead">{{ site.description }}</p> -->
+    <!-- Navigation links -->
+    <nav class="header-nav">
+      <ul>
+        <!-- Include the "Home" link on subpages -->
+        <li><a href="{{ site.baseurl }}/index.html" class="header-link">Home</a></li>
 
-        <!-- Navigation links -->
-        <nav class="header-nav">
-          <ul>
-            <!-- Include the "Home" link on subpages -->
-            <li><a href="{{ site.baseurl }}/index.html" class="header-link">Home</a></li>
-
-            <!-- Dynamically list pages excluding "Mesoscale..." page -->
-            {% assign pages_list = site.pages %}
-            {% for page in pages_list %}
-              {% if page.title != null and page.url != "/index.html" and page.url != "/404.html" and page.url != "/archive.html" %}
-                {% if page.title != "Mesoscale Convective Systems tracking Method Intercomparison (MCSMIP)" %}
-                  <li><a href="{{ site.baseurl }}{{ page.url }}" class="header-link">{{ page.title }}</a></li>
-                {% endif %}
-              {% endif %}
-            {% endfor %}
-          </ul>
-        </nav>
-      </div>
-    </header>
+        <!-- Dynamically list pages excluding "Mesoscale..." page and child pages -->
+        {% assign pages_list = site.pages %}
+        {% for page in pages_list %}
+          {% if page.title != null and page.url != "/index.html" and page.url != "/404.html" and page.url != "/archive.html" %}
+            {% if page.title != "Mesoscale Convective Systems tracking Method Intercomparison (MCSMIP)" %}
+              <!-- Exclude pages with a parent field -->
+              {% unless page.parent %}
+                <li><a href="{{ site.baseurl }}{{ page.url }}" class="header-link">{{ page.title }}</a></li>
+              {% endunless %}
+            {% endif %}
+          {% endif %}
+        {% endfor %}
+      </ul>
+    </nav>
   {% endif %}
 </body>
