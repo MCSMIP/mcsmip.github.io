@@ -4,6 +4,22 @@ title: "Data Access and Policies"
 order: 2
 ---
 
+<style>
+  /* Increase font size for this page only */
+  body {
+    font-size: 21px; /* Adjust this value as needed */
+  }
+
+  /* Optionally, target specific elements */
+  h1 {
+    font-size: 2.5em;
+  }
+
+  p {
+    font-size: 1.2em;
+  }
+</style>
+
 Data Access for MCS catalogues, processed DYAMOND data, Citation, and Authoship.
 
 # MCSMIP: DYAMOND Data Access
