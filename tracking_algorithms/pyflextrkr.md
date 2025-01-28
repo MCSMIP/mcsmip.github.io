@@ -37,7 +37,9 @@ Currently PyFLEXTRKR supports tracking:
 
 <img src="images/tracker_pyflextrkr_merging_splitting.gif" alt="Cover Image" style="max-width: 70%; height: auto;">
 
-**MCSMIP**: Convective cloud objects were identified using the detect-and-spread approach: 
+# **MCSMIP**
+
+In MCSMIP, convective cloud objects were identified using the detect-and-spread approach: 
 
 1. **Label cold cores**: A 10-grid (~100 km) box filter smoothing was first applied to the brightness temperature (T<sub>b</sub>) field, and contiguous areas with the smoothed T<sub>b</sub> < 225 K were labeled as cold cores. 
 2. **Spread to cold anvil**: Each cold core was spread outward to surrounding grids until T<sub>b</sub> (original) reached 241 K and grids with the closest distance to nearby cold core were assigned the same label. 
@@ -47,6 +49,7 @@ All objects with area > 800 km<sup>2</sup> were tracked based on their area over
 Example tracking config files for MCSMIP is avaialble under the [/config](https://github.com/FlexTRKR/PyFLEXTRKR/tree/main/config) directory in the Github repository (e.g., [`config_dyamond_summer_obs.yml`](https://github.com/FlexTRKR/PyFLEXTRKR/blob/main/config/config_dyamond_summer_obs.yml)).
 
 Here's the command to run the tracking for MCSMIP:
+
 `python /runscripts/run_mcs_tbpf_saag.py /config/config_dyamond_summer_obs.yml`
 
 
