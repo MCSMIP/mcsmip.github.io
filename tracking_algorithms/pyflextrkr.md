@@ -31,11 +31,12 @@ Currently PyFLEXTRKR supports tracking:
 2. Mesoscale convective systems (MCSs), 
 3. General atmospheric objects defined by customizable feature identification functions.
 
-<img src="images/tracker_pyflextrkr_cover_image.gif" alt="Cover Image" style="max-width: 70%; height: auto;">
+<img src="../images/tracker_pyflextrkr_cover_image.gif" alt="Cover Image" style="max-width: 70%; height: auto;">
 
 **Tracking** in PyFLEXTRKR primarily uses object overlap technique, with an option to use advection estimates (2D cross-correlation) to increase overlap probability. Largest overlap objects are tracked continuously, and smaller overlap objects are marked as merging/splitting.
 
-<img src="images/tracker_pyflextrkr_merging_splitting.gif" alt="Cover Image" style="max-width: 70%; height: auto;">
+<img src="../images/tracker_pyflextrkr_merging_splitting.gif" alt="Cover Image" style="max-width: 70%; height: auto;">
+
 
 # **MCSMIP**
 
