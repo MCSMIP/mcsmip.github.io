@@ -37,6 +37,7 @@ Currently PyFLEXTRKR supports tracking:
 
 <img src="../images/tracker_pyflextrkr_merging_splitting.gif" alt="Cover Image" style="max-width: 70%; height: auto;">
 
+
 # **MCSMIP**
 
 In MCSMIP, convective cloud objects were identified using the detect-and-spread approach: 
