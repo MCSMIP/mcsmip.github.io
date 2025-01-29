@@ -23,24 +23,25 @@ order: 3
 
 ### MCSMIP-DYAMOND
 
-* [Zhe Feng](https://orcid.org/0000-0002-7540-9017)
-* [Andreas Franz Prein](https://orcid.org/0000-0001-6250-179X)
-* [Julia Kukulies](https://orcid.org/0000-0001-6084-0069)
-* [Thomas Fiolleau](https://orcid.org/0000-0001-5902-1701) 
-* [William Kenneth Jones](https://orcid.org/0000-0001-9786-3723)
-* [Ben Maybee](https://orcid.org/0000-0001-7834-9489)
-* [Zachary Moon](https://orcid.org/0000-0003-0019-0660)
-* [Kelly M. Núñez Ocasio](https://orcid.org/0000-0003-0473-9382)
-* [Wenhao Dong](https://orcid.org/0000-0002-5662-5435)
-* [Maria J. Molina](https://orcid.org/0000-0001-8539-8916)
-* Mary Grace Albright
-* [Ran Feng](https://orcid.org/0000-0002-4433-4745)
-* Jinyan Song
-* [Fengfei Song](https://orcid.org/0000-0002-3004-1749)
-* [Ruby Leung](https://orcid.org/0000-0002-3221-9467)
-* [Adam Varble](https://orcid.org/0000-0001-5926-7154)
-* [Cornelia Klein](https://orcid.org/0000-0001-6686-0458)
-* [Rémy Roca](https://orcid.org/0000-0003-1843-0204)
-
+* [Zhe Feng (zhe.feng@pnnl.gov)](https://orcid.org/0000-0002-7540-9017)
+* [Andreas Franz Prein (andreas.prein@usys.ethz.ch)](https://orcid.org/0000-0001-6250-179X)
+* [Julia Kukulies (kukulies@ucar.edu)](https://orcid.org/0000-0001-6084-0069)
+* [Thomas Fiolleau (thomas.fiolleau@cnrs.fr)](https://orcid.org/0000-0001-5902-1701) 
+* [William Kenneth Jones (william.jones@physics.ox.ac.uk)](https://orcid.org/0000-0001-9786-3723)
+* [Ben Maybee (B.W.Maybee@leeds.ac.uk)](https://orcid.org/0000-0001-7834-9489)
+* [Zachary Moon (zachary.moon@noaa.gov)](https://orcid.org/0000-0003-0019-0660)
+* [Kelly M. Núñez Ocasio (knunez.ocasio@tamu.edu)](https://orcid.org/0000-0003-0473-9382)
+* [Wenhao Dong (wenhao.dong@noaa.gov)](https://orcid.org/0000-0002-5662-5435)
+* [Maria J. Molina (hurricanemolina@gmail.com)](https://orcid.org/0000-0001-8539-8916)
+* Mary Grace Albright (mary.albright@uconn.edu)
+* [Ran Feng (ran.feng@uconn.edu)](https://orcid.org/0000-0002-4433-4745)
+* Jinyan Song (songjingyan@stu.ouc.edu.cn)
+* [Fengfei Song (songfengfei@ouc.edu.cn)](https://orcid.org/0000-0002-3004-1749)
+* [Ruby Leung (Ruby.Leung@pnnl.gov)](https://orcid.org/0000-0002-3221-9467)
+* [Adam Varble (adam.varble@pnnl.gov)](https://orcid.org/0000-0001-5926-7154)
+* [Cornelia Klein (cornkle@ceh.ac.uk)](https://orcid.org/0000-0001-6686-0458)
+* [Rémy Roca (remy.roca@cnrs.fr)](https://orcid.org/0000-0003-1843-0204)
+* [Manikandan Rajagopal (mani.rajagopal@utah.edu)]
+* [Vanessa Robledo Delgado (vanessa-robledodelgado@uiowa.edu)]
 
 
