@@ -1,7 +1,7 @@
 ---
 layout: page
-title: "Key findings of MCSMIP-DYAMOND"
-order: 4.5
+title: "Key findings"
+order: 5.5
 ---
 
 <style>
@@ -20,7 +20,10 @@ order: 4.5
   }
 </style>
 
+## MCSMIP-DYAMOND 
 
-*Mesoscale convective systems (MCSs) in global km-scale models are evaluated against satellite observations using eight ten feature trackers.
-*Most models underestimate MCS precipitation amount and their contribution to total precipitation, with larger biases over ocean.
-*Models overestimate MCS precipitation intensity and its sensitivity to precipitable water while underestimating stratiform rain contribution.
+* Mesoscale convective systems (MCSs) in global km-scale models are evaluated against satellite observations using eight ten feature trackers.
+
+* Most models underestimate MCS precipitation amount and their contribution to total precipitation, with larger biases over ocean.
+
+* Models overestimate MCS precipitation intensity and its sensitivity to precipitable water while underestimating stratiform rain contribution.
