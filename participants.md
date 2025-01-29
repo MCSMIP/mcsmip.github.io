@@ -41,7 +41,7 @@ order: 3
 * [Adam Varble (adam.varble@pnnl.gov)](https://orcid.org/0000-0001-5926-7154)
 * [Cornelia Klein (cornkle@ceh.ac.uk)](https://orcid.org/0000-0001-6686-0458)
 * [Rémy Roca (remy.roca@cnrs.fr)](https://orcid.org/0000-0003-1843-0204)
-* [Manikandan Rajagopal (mani.rajagopal@utah.edu)]
-* [Vanessa Robledo Delgado (vanessa-robledodelgado@uiowa.edu)]
+* [Manikandan Rajagopal (mani.rajagopal@utah.edu)](https://orcid.org/0000-0001-7915-0180)
+* Vanessa Robledo Delgado (vanessa-robledodelgado@uiowa.edu)
 
 
