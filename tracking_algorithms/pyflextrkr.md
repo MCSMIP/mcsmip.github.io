@@ -47,7 +47,7 @@ In MCSMIP, convective cloud objects were identified using the detect-and-spread 
 
 All objects with area > 800 km<sup>2</sup> were tracked based on their area overlap. Objects between two adjacent hours with an area overlap fraction > 0.5 were considered the same track. If more than one object exceeded the overlap fraction, the largest one was tracked continuously, and the smaller ones were labeled as merging or splitting. If a tracked cloud system meets the MCS criteria (MCSMIP-DYAMOND paper, Section 2c), the entire track is labeled as MCS, including the convection initiation period and decay period. Non-MCS cloud objects that merge with or split from an MCS were also included as part of that MCS, and were assigned the same track number in the MCS mask files. 
 
-Example tracking config files for MCSMIP is avaialble under the [/config](https://github.com/FlexTRKR/PyFLEXTRKR/tree/main/config) directory in the Github repository (e.g., [`config_dyamond_summer_obs.yml`](https://github.com/FlexTRKR/PyFLEXTRKR/blob/main/config/config_dyamond_summer_obs.yml)).
+Example tracking config files for MCSMIP is available under the [/config](https://github.com/FlexTRKR/PyFLEXTRKR/tree/main/config) directory in the Github repository (e.g., [`config_dyamond_summer_obs.yml`](https://github.com/FlexTRKR/PyFLEXTRKR/blob/main/config/config_dyamond_summer_obs.yml)).
 
 Here's the command to run the tracking for MCSMIP:
 
