@@ -20,6 +20,7 @@ Please submit a pull request if you would like to contribute to the content of t
 
 This homepage was built with [GitHub pages](https://docs.github.com/en/pages). The most important files to modify this page include: 
 
+```
  ├── index.html          # The main landing page
 
  ├── datasets.md       # Additional pages (in markdown format)
@@ -35,7 +36,7 @@ This homepage was built with [GitHub pages](https://docs.github.com/en/pages). T
     │   └── head.html        # HTML rendering of navigation bar on subpages
 
  ├── _config.yml         # Configuration file with main setting and Jekyll theme
-
+```
 
 For questions on how to contribute, contact: *kukulies@ucar.edu*
 
