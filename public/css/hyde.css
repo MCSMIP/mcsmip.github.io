@@ -290,3 +290,41 @@ a.sidebar-nav-item:focus {
 .theme-base-0f .related-posts li a:hover {
   color: #8f5536;
 }
+
+/* Lightbox styles */
+.lightbox {
+  display: none; /* Hidden by default */
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.8); /* Semi-transparent black background */
+  z-index: 9999;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Lightbox image */
+.lightbox img {
+  max-width: 90%;
+  max-height: 90%;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  border-radius: 8px;
+  animation: fadeIn 0.3s ease-in-out;
+}
+
+/* Simple fade-in animation */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/* Cursor pointer for clickable image */
+.figure-container img {
+  cursor: pointer;
+}
