@@ -32,7 +32,7 @@ order: 3
 * [Zachary Moon (zachary.moon@noaa.gov)](https://orcid.org/0000-0003-0019-0660)
 * [Kelly M. Núñez Ocasio (knunez.ocasio@tamu.edu)](https://orcid.org/0000-0003-0473-9382)
 * [Wenhao Dong (wenhao.dong@noaa.gov)](https://orcid.org/0000-0002-5662-5435)
-* [Maria J. Molina (hurricanemolina@gmail.com)](https://orcid.org/0000-0001-8539-8916)
+* [Maria J. Molina (mjmolina@umd.edu)](https://orcid.org/0000-0001-8539-8916)
 * Mary Grace Albright (mary.albright@uconn.edu)
 * [Ran Feng (ran.feng@uconn.edu)](https://orcid.org/0000-0002-4433-4745)
 * Jinyan Song (songjingyan@stu.ouc.edu.cn)
