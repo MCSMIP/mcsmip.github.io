@@ -28,25 +28,33 @@ title: "Mesoscale Convective Systems tracking Method Intercomparison (MCSMIP)"
 
 <!-- Second Figure with Caption -->
 <div class="figure-container">
-  <img src="/images/main_mcsrainfraction_small.gif" alt="MCS Rainfall" style="max-width: 100%; height: auto;">
+  <img src="/images/main_mcsrainfraction_small.gif" 
+       alt="MCS Rainfall" 
+       style="max-width: 100%; height: auto;" 
+       onclick="openLightbox('/images/main_mcsrainfraction_large.gif')">
   <div class="figure-caption">
-    <em>Comparisons of observed MCS contribution to total precipitation quantified by different tracking algorithms. Global distribution of MCS contribution to total recipitation for (a) summer and (b) winter based on results from PyFLEXTRKR. Tropical and global (60°S-60°N) mean values of the trackers are shown in (c) summer and (d) winter. 
+    <em>
+      Comparisons of observed MCS contribution to total precipitation quantified by different tracking algorithms. Global distribution of MCS contribution to total precipitation for (a) summer and (b) winter based on results from PyFLEXTRKR. Tropical and global (60°S-60°N) mean values of the trackers are shown in (c) summer and (d) winter. 
     </em>
   </div>
 </div>
 
 <!-- Lightbox Modal -->
 <div id="lightbox" class="lightbox" onclick="closeLightbox()">
-  <img id="lightbox-img" src="/images/main_mcsrainfraction_small.gif" alt="MCS Rainfall">
+  <img id="lightbox-img" alt="Large Image">
 </div>
 
 <script>
-  // JavaScript for Lightbox effect
-  
   // Open the lightbox
-  function openLightbox() {
+  function openLightbox(imageSrc) {
     const lightbox = document.getElementById('lightbox');
-    lightbox.style.display = 'flex'; // Show the lightbox
+    const lightboxImg = document.getElementById('lightbox-img');
+    
+    // Set the source of the lightbox image dynamically
+    lightboxImg.src = imageSrc;
+
+    // Show the lightbox
+    lightbox.style.display = 'flex';
   }
 
   // Close the lightbox
