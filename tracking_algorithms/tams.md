@@ -38,6 +38,11 @@ Users can use the eccentricity calculation function as a measure of the MCS shap
 
 The documentation is available at <https://tams.readthedocs.io>.
 
+### MCSMIP
+
+Information about how TAMS was run for MCSMIP, including scripts, can be found
+[here](https://github.com/knubez/TAMS/tree/59dc3a3ba7a0d34035d0aaea0c6cde6c36394929/examples/dyamond).
+
 ---
 
 ### References
