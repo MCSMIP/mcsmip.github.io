@@ -38,7 +38,7 @@ In MCSMIP, MCS detection and characterization are performed using these steps:
 
 5. Tracking: To assign different polygons to the same track in time, ATRACKCS uses a predefined threshold of overlapping area in consecutive times. The minimum area overlapping allowed is 25%. To deal with the splitting and merging of systems, if multiple systems overlap at the same timestep, ATRACKCS evaluates which systems satisfy the identification criteria and then selects the one with the higher overlapping area to the previous time step to continue the track; the remaining systems are tracked as new ones if satisfy the thresholds.
 
-<img src="/images/resume_atrackcs.png" alt="Cover Image" style="max-width: 70%\
+<img src="/images/resume_atrackcs.png" alt="Cover Image" style="max-width: 50%\
 ; height: auto;">
 
 ATRACKCS can be accessed at [https://doi.org/10.5281/zenodo.7025989](https://doi.org/10.5281/zenodo.7025989).
