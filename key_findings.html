@@ -1,6 +1,6 @@
 ---
 layout: page
-title: "Key findings"
+title: "Key Findings"
 order: 5.5
 ---
 
@@ -20,10 +20,124 @@ order: 5.5
   }
 </style>
 
-## MCSMIP-DYAMOND 
 
-- Mesoscale convective systems (MCSs) in global km-scale models are evaluated against satellite observations using eight ten feature trackers.
+<div class="indent-text">
+  <h1>Key Findings from MCSMIP-DYAMOND</h1>
+  <p>
+    We comprehensively evaluate tropical mesoscale convective system (MCS) characteristics in the DYAMOND <a href="https://doi.org/10.1186/s40645-019-0304-z">(Stevens et al. 2019)</a> global km-scale model simulations for both summer and winter phases. Using <a href="https://mcsmip.github.io/trackers/">ten different feature trackers</a> applied to simulations and satellite observations, we assess MCS frequency, precipitation, and other key characteristics.
+  </p>
+</div>
 
-- Most models underestimate MCS precipitation amount and their contribution to total precipitation, with larger biases over ocean.
+<div class="indent-text">
+  <h2>MCS Characteristics from Participated Trackers</h2>
+  <p>
+    Table 1 summarizes the MCS characteristics derived from each tracker relative to the average characteristics across the tracker ensemble based on observations. Rather than providing a ranking, the table illustrates how the behavior of each tracker compares to others, as no reference tracking dataset on the global scale exists for the study period to quantitatively validate the derived MCS characteristics. Future research using any of the trackers examined in this study should carefully consider the behavior of their selected tracker, particularly when comparing results across studies, as differences between trackers may significantly influence outcomes.
+  </p>
+</div>
 
-- Models overestimate MCS precipitation intensity and its sensitivity to precipitable water while underestimating stratiform rain contribution.
+<div class="figure-container">
+  <img src="/images/keyfindings_table1.gif" 
+       alt="Tracker MCS Properties" 
+       style="max-width: 100%; height: auto;" 
+       onclick="openLightbox('/images/keyfindings_table1.gif')">
+  <div class="figure-caption">
+    <em>Table 1. Characteristics of MCS properties for each tracker relative to other trackers. Qualitative assessments are based on comparisons of tracker results applied to observations.</em>
+  </div>
+</div>
+
+
+<div class="indent-text">
+  <h2>MCS Frequency and Precipitation Amount Biases</h2>
+  <p> 
+    Despite substantial differences (a factor of 2-3) in observed MCS frequency and their precipitation contribution among the trackers, model-observation differences in MCS statistics are more consistent across the tracker ensemble.
+  </p>
+  <p> 
+    Models are generally skillful in simulating tropical mean MCS frequency, with mean biases of -2% to 8% over land and -8% to 8% over ocean (summer vs. winter), though large variability exists among the models (Figure 1 left column). Most models underestimate MCS precipitation amount (-14% over land, -28% to -37% over ocean, Figure 1 middle column) and their contribution to total precipitation (Figure 1 right column), with smaller multi-model mean biases over land (-13%) than over ocean (-21%). The smaller bias over land may be related to the stronger diurnal cycle that drives MCS development compared to that over the ocean.
+  </p>
+</div>
+
+<div class="figure-container">
+  <img src="/images/keyfindings_globalmap_3biases_small.gif" 
+       alt="Gloabl Map and Biases" 
+       style="max-width: 100%; height: auto;" 
+       onclick="openLightbox('/images/keyfindings_globalmap_3biases.gif')">
+  <div class="figure-caption">
+    <em>Figure 1. Global distribution of multi-tracker mean observed MCS statistics (top two rows): MCS frequency (left column), MCS precipitation amount (middle column), and MCS precipitation fraction (right column). Model biases (bottom two rows) are shown for each model (y-axis) and each model (x-axis). Dark green shadings denote high bias, dark brown shadings denote low bias.</em>
+  </div>
+</div>
+
+<div class="indent-text">
+  <h2>MCS Characteristics</h2>
+  <p>
+    MCS cloud shield characteristics are better simulated than precipitation (Figure 2). Most models overestimate MCS mean precipitation intensity (by a factor of 2-3) and underestimate stratiform rain contribution (up to a factor of 2), particularly over land (Figure 3).
+  </p>
+</div>
+
+<div class="figure-container">
+  <img src="/images/keyfindings_mcs_characteristics_small.gif" 
+       alt="MCS Characteristics" 
+       style="max-width: 100%; height: auto;" 
+       onclick="openLightbox('/images/keyfindings_mcs_characteristics.gif')">
+  <div class="figure-caption">
+    <em>Figure 2. Relative difference in the median values of MCS properties between simulations and observations for each model (x-axis) and each tracker (y-axis). Dark red shadings denote high bias, dark blue shadings denote low bias. Top row: MCS cloud shield characteristics, bottom row: MCS precipitation characteristics. (a),(g) MCS lifetime, (b),(h) lifetime-maximum cold cloud shield area, (c),(i) lifetime-minimum Tb, (d),(j) lifetime-total rain volume, (e),(k) PF mean rain rate, (f),(l) heavy rain (> 10 mm h<sup>-1</sup>) to total rain volume ratio.</em>
+  </div>
+</div>
+
+<div class="figure-container">
+  <img src="/images/keyfindings_rainrate_contribution_small.gif" 
+       alt="MCS Characteristics" 
+       style="max-width: 100%; height: auto;" 
+       onclick="openLightbox('/images/keyfindings_rainrate_contribution.gif')">
+  <div class="figure-caption">
+    <em>Figure 3. Contribution of hourly, 0.1° rain rates to tropical MCS rainfall amount based on results from PyFLEXTRKR for (a),(b) oceanic MCS and (c),(d) land MCS.</em>
+  </div>
+</div>
+
+<div class="indent-text">
+  <h2>Moisture Evolution Associated with MCSs</h2>
+  <p>
+    Models capture the environmental moistening rate leading up to MCS initiation both over ocean and land, but a large inter-model spread in the magnitude of PW is found (Figure 4).
+  </p>
+</div>
+
+<div class="figure-container">
+  <img src="/images/keyfindings_PWevolution_small.gif" 
+       alt="MCS PW Evolution" 
+       style="max-width: 100%; height: auto;" 
+       onclick="openLightbox('/images/keyfindings_PWevolution.gif')">
+  <div class="figure-caption">
+    <em>Figure 4. Composite lifecycle evolution of precipitable water (PW) associated with tropical MCSs over (a),(c) ocean, and (b),(d) land. Each row shows results from a tracker. Thick black lines are tracking using observations with IMERG v6, gray lines are tracking using observations with IMERG v7. Blue shaded periods are 24 hours before MCS initiation at the same location as initiation, while the white periods are following the MCS tracks.</em>
+  </div>
+</div>
+
+
+<div class="indent-text">
+  <h2>MCS Precipitation Intensity Biases</h2>
+  <p>
+    Most models simulate the exponential increase of MCS precipitation intensity beyond the critical PW value over ocean, although the MCS precipitation sensitivity to PW is overestimated (by a factor of 2-3) in most models (Figure 5).
+  </p>
+</div>
+
+<div class="figure-container">
+  <img src="/images/keyfindings_PWrainrate_small.gif" 
+       alt="MCS PW vs. Rainrate" 
+       style="max-width: 100%; height: auto;" 
+       onclick="openLightbox('/images/keyfindings_PWrainrate.gif')">
+  <div class="figure-caption">
+    <em>Figure 5. Mean tropical MCS hourly rain rate as a function of collocated precipitable water (PW) over ocean for (a) summer and (b) winter.</em>
+  </div>
+</div>
+
+<div class="indent-text">
+  <h2>Summary of DYAMOND Model Biases</h2>
+</div>
+
+<div class="figure-container">
+  <img src="/images/keyfindings_table2.gif" 
+       alt="Summary of Model Biases" 
+       style="max-width: 100%; height: auto;" 
+       onclick="openLightbox('/images/keyfindings_table2.gif')">
+  <div class="figure-caption">
+    <em>Table 2. Summary of model biases in simulated MCS characteristics. Note: An “X” in the bias sign column indicates fewer than 50% models share the same bias sign. Color shading in each cell represents the confidence based on agreement across the tracker ensemble: high confidence (green), low confidence (orange). Bold texts highlights instances of large mean bias or large intermodal spread accompanied by high confidence.</em>
+  </div>
+</div>
