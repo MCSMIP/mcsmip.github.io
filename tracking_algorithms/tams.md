@@ -28,17 +28,24 @@ conda install -c conda-forge tams
 
 Currently, **Identify**, **Assignment**, and some post-processing can be done in parallel.
 
-**Settings**
+### Settings
 
 Users can choose outer and core thresholds of CEs for object detection, optionally define zonal projection velocity, and choose the % overlap threshold for time matching.
 
-**Helper functions and utilities**
+### Helper functions and utilities
 
 Users can use the eccentricity calculation function as a measure of the MCS shape. Other functions include plotting MCS tracks, loading sample [MSG](https://www.eumetsat.int/0-degree-service) ch9 satellite data, and [MPAS](https://mpas-dev.github.io/) data. Jupyter Notebooks and examples are available for calculating brightness temperature from EUMETSAT, MPAS Cloud Top Temperature from OLR, and others.
 
 The documentation is available at <https://tams.readthedocs.io>.
 
-**References**
+### MCSMIP
+
+Information about how TAMS was run for MCSMIP, including scripts, can be found
+[here](https://github.com/knubez/TAMS/tree/59dc3a3ba7a0d34035d0aaea0c6cde6c36394929/examples/dyamond).
+
+---
+
+### References
 
 Kelly M. Núñez Ocasio, Jenni L. Evans, and George S. Young. Tracking Mesoscale Convective Systems that are Potential Candidates for Tropical Cyclogenesis. *Monthly Weather Review*, 148(2):655 – 669, Feb 2020. [doi:10.1175/MWR-D-19-0070.1](https://doi.org/10.1175/MWR-D-19-0070.1).
 
