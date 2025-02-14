@@ -158,25 +158,3 @@ order: 5.5
 <div id="lightbox" class="lightbox" onclick="closeLightbox()">
   <img id="lightbox-img" alt="Large Image">
 </div>
-
-<script>
-  document.addEventListener("DOMContentLoaded", function() {
-    // Open the lightbox
-    window.openLightbox = function(imageSrc) {
-      const lightbox = document.getElementById('lightbox');
-      const lightboxImg = document.getElementById('lightbox-img');
-      
-      // Set the source of the lightbox image dynamically
-      lightboxImg.src = imageSrc;
-
-      // Show the lightbox
-      lightbox.style.display = 'flex';
-    };
-
-    // Close the lightbox
-    window.closeLightbox = function() {
-      const lightbox = document.getElementById('lightbox');
-      lightbox.style.display = 'none'; // Hide the lightbox
-    };
-  });
-</script>
