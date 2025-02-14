@@ -303,6 +303,7 @@ a.sidebar-nav-item:focus {
   z-index: 9999;
   justify-content: center;
   align-items: center;
+  cursor: pointer !important; /* Keep pointer cursor when Lightbox is open */
 }
 
 /* Lightbox image */
@@ -312,6 +313,7 @@ a.sidebar-nav-item:focus {
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
   border-radius: 8px;
   animation: fadeIn 0.3s ease-in-out;
+  cursor: pointer !important; /* Keep pointer cursor on image */
 }
 
 /* Simple fade-in animation */
@@ -326,5 +328,5 @@ a.sidebar-nav-item:focus {
 
 /* Cursor pointer for clickable image */
 .figure-container img {
-  cursor: pointer;
+  cursor: pointer !important; /* Force pointer cursor */
 }
