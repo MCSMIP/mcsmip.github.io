@@ -41,7 +41,8 @@ order: 5.5
        style="max-width: 100%; height: auto;" 
        onclick="openLightbox('/images/keyfindings_table1.gif')">
   <div class="figure-caption">
-    <em>Table 1. Characteristics of MCS properties for each tracker relative to other trackers. Qualitative assessments are based on comparisons of tracker results applied to observations.</em>
+    <em>Table 1. Characteristics of MCS properties for each tracker relative to other trackers. Qualitative assessments are based on comparisons of tracker results applied to observations.
+    </em>
   </div>
 </div>
 
@@ -62,7 +63,9 @@ order: 5.5
        style="max-width: 100%; height: auto;" 
        onclick="openLightbox('/images/keyfindings_globalmap_3biases.gif')">
   <div class="figure-caption">
-    <em>Figure 1. Global distribution of multi-tracker mean observed MCS statistics (top two rows): MCS frequency (left column), MCS precipitation amount (middle column), and MCS precipitation fraction (right column). Model biases (bottom two rows) are shown for each model (y-axis) and each model (x-axis). Dark green shadings denote high bias, dark brown shadings denote low bias.</em>
+    <em>
+      Figure 1. Global distribution of multi-tracker mean observed MCS statistics (top two rows): MCS frequency (left column), MCS precipitation amount (middle column), and MCS precipitation fraction (right column). Model biases (bottom two rows) are shown for each model (y-axis) and each model (x-axis). Dark green shadings denote high bias, dark brown shadings denote low bias.
+    </em>
   </div>
 </div>
 
@@ -79,7 +82,9 @@ order: 5.5
        style="max-width: 100%; height: auto;" 
        onclick="openLightbox('/images/keyfindings_mcs_characteristics.gif')">
   <div class="figure-caption">
-    <em>Figure 2. Relative difference in the median values of MCS properties between simulations and observations for each model (x-axis) and each tracker (y-axis). Dark red shadings denote high bias, dark blue shadings denote low bias. Top row: MCS cloud shield characteristics, bottom row: MCS precipitation characteristics. (a),(g) MCS lifetime, (b),(h) lifetime-maximum cold cloud shield area, (c),(i) lifetime-minimum Tb, (d),(j) lifetime-total rain volume, (e),(k) PF mean rain rate, (f),(l) heavy rain (> 10 mm h<sup>-1</sup>) to total rain volume ratio.</em>
+    <em>
+      Figure 2. Relative difference in the median values of MCS properties between simulations and observations for each model (x-axis) and each tracker (y-axis). Dark red shadings denote high bias, dark blue shadings denote low bias. Top row: MCS cloud shield characteristics, bottom row: MCS precipitation characteristics. (a),(g) MCS lifetime, (b),(h) lifetime-maximum cold cloud shield area, (c),(i) lifetime-minimum Tb, (d),(j) lifetime-total rain volume, (e),(k) PF mean rain rate, (f),(l) heavy rain (> 10 mm h<sup>-1</sup>) to total rain volume ratio.
+    </em>
   </div>
 </div>
 
@@ -89,7 +94,8 @@ order: 5.5
        style="max-width: 100%; height: auto;" 
        onclick="openLightbox('/images/keyfindings_rainrate_contribution.gif')">
   <div class="figure-caption">
-    <em>Figure 3. Contribution of hourly, 0.1° rain rates to tropical MCS rainfall amount based on results from PyFLEXTRKR for (a),(b) oceanic MCS and (c),(d) land MCS.</em>
+    <em>
+      Figure 3. Contribution of hourly, 0.1° rain rates to tropical MCS rainfall amount based on results from PyFLEXTRKR for (a),(b) oceanic MCS and (c),(d) land MCS.</em>
   </div>
 </div>
 
@@ -106,7 +112,9 @@ order: 5.5
        style="max-width: 100%; height: auto;" 
        onclick="openLightbox('/images/keyfindings_PWevolution.gif')">
   <div class="figure-caption">
-    <em>Figure 4. Composite lifecycle evolution of precipitable water (PW) associated with tropical MCSs over (a),(c) ocean, and (b),(d) land. Each row shows results from a tracker. Thick black lines are tracking using observations with IMERG v6, gray lines are tracking using observations with IMERG v7. Blue shaded periods are 24 hours before MCS initiation at the same location as initiation, while the white periods are following the MCS tracks.</em>
+    <em>
+      Figure 4. Composite lifecycle evolution of precipitable water (PW) associated with tropical MCSs over (a),(c) ocean, and (b),(d) land. Each row shows results from a tracker. Thick black lines are tracking using observations with IMERG v6, gray lines are tracking using observations with IMERG v7. Blue shaded periods are 24 hours before MCS initiation at the same location as initiation, while the white periods are following the MCS tracks.      
+    </em>
   </div>
 </div>
 
@@ -124,7 +132,9 @@ order: 5.5
        style="max-width: 100%; height: auto;" 
        onclick="openLightbox('/images/keyfindings_PWrainrate.gif')">
   <div class="figure-caption">
-    <em>Figure 5. Mean tropical MCS hourly rain rate as a function of collocated precipitable water (PW) over ocean for (a) summer and (b) winter.</em>
+    <em>
+      Figure 5. Mean tropical MCS hourly rain rate as a function of collocated precipitable water (PW) over ocean for (a) summer and (b) winter.      
+    </em>
   </div>
 </div>
 
@@ -138,7 +148,9 @@ order: 5.5
        style="max-width: 100%; height: auto;" 
        onclick="openLightbox('/images/keyfindings_table2.gif')">
   <div class="figure-caption">
-    <em>Table 2. Summary of model biases in simulated MCS characteristics. Note: An “X” in the bias sign column indicates fewer than 50% models share the same bias sign. Color shading in each cell represents the confidence based on agreement across the tracker ensemble: high confidence (green), low confidence (orange). Bold texts highlights instances of large mean bias or large intermodal spread accompanied by high confidence.</em>
+    <em>
+      Table 2. Summary of model biases in simulated MCS characteristics. Note: An “X” in the bias sign column indicates fewer than 50% models share the same bias sign. Color shading in each cell represents the confidence based on agreement across the tracker ensemble: high confidence (green), low confidence (orange). Bold texts highlights instances of large mean bias or large intermodal spread accompanied by high confidence.
+    </em>
   </div>
 </div>
 
@@ -148,24 +160,23 @@ order: 5.5
 </div>
 
 <script>
-  // Open the lightbox
-  function openLightbox(imageSrc) {
-    const lightbox = document.getElementById('lightbox');
-    const lightboxImg = document.getElementById('lightbox-img');
-    
-    // Set the source of the lightbox image dynamically
-    lightboxImg.src = imageSrc;
+  document.addEventListener("DOMContentLoaded", function() {
+    // Open the lightbox
+    window.openLightbox = function(imageSrc) {
+      const lightbox = document.getElementById('lightbox');
+      const lightboxImg = document.getElementById('lightbox-img');
+      
+      // Set the source of the lightbox image dynamically
+      lightboxImg.src = imageSrc;
 
-    // Show the lightbox
-    lightbox.style.display = 'flex';
-  }
+      // Show the lightbox
+      lightbox.style.display = 'flex';
+    };
 
-  // Close the lightbox
-  function closeLightbox() {
-    const lightbox = document.getElementById('lightbox');
-    lightbox.style.display = 'none'; // Hide the lightbox
-  }
+    // Close the lightbox
+    window.closeLightbox = function() {
+      const lightbox = document.getElementById('lightbox');
+      lightbox.style.display = 'none'; // Hide the lightbox
+    };
+  });
 </script>
-
-</body>
-</html>
