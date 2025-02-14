@@ -29,14 +29,14 @@ order: 5.5
 </div>
 
 <div class="indent-text">
-  <h2>MCS Characteristics from Participated Trackers</h2>
+  <h2>1. MCS Characteristics from Participated Trackers</h2>
   <p>
     Table 1 summarizes the MCS characteristics derived from each tracker relative to the average characteristics across the tracker ensemble based on observations. Rather than providing a ranking, the table illustrates how the behavior of each tracker compares to others, as no reference tracking dataset on the global scale exists for the study period to quantitatively validate the derived MCS characteristics. Future research using any of the trackers examined in this study should carefully consider the behavior of their selected tracker, particularly when comparing results across studies, as differences between trackers may significantly influence outcomes.
   </p>
 </div>
 
 <div class="figure-container">
-  <img src="/images/keyfindings_table1.gif" 
+  <img src="/images/keyfindings_table1_small.gif" 
        alt="Tracker MCS Properties" 
        style="max-width: 100%; height: auto;" 
        onclick="openLightbox('/images/keyfindings_table1.gif')">
@@ -47,7 +47,7 @@ order: 5.5
 
 
 <div class="indent-text">
-  <h2>MCS Frequency and Precipitation Amount Biases</h2>
+  <h2>2. MCS Frequency and Precipitation Amount Biases</h2>
   <p> 
     Despite substantial differences (a factor of 2-3) in observed MCS frequency and their precipitation contribution among the trackers, model-observation differences in MCS statistics are more consistent across the tracker ensemble.
   </p>
@@ -67,7 +67,7 @@ order: 5.5
 </div>
 
 <div class="indent-text">
-  <h2>MCS Characteristics</h2>
+  <h2>3. MCS Characteristics</h2>
   <p>
     MCS cloud shield characteristics are better simulated than precipitation (Figure 2). Most models overestimate MCS mean precipitation intensity (by a factor of 2-3) and underestimate stratiform rain contribution (up to a factor of 2), particularly over land (Figure 3).
   </p>
@@ -94,7 +94,7 @@ order: 5.5
 </div>
 
 <div class="indent-text">
-  <h2>Moisture Evolution Associated with MCSs</h2>
+  <h2>4. Moisture Evolution Associated with MCSs</h2>
   <p>
     Models capture the environmental moistening rate leading up to MCS initiation both over ocean and land, but a large inter-model spread in the magnitude of PW is found (Figure 4).
   </p>
@@ -112,7 +112,7 @@ order: 5.5
 
 
 <div class="indent-text">
-  <h2>MCS Precipitation Intensity Biases</h2>
+  <h2>5. MCS Precipitation Intensity Biases</h2>
   <p>
     Most models simulate the exponential increase of MCS precipitation intensity beyond the critical PW value over ocean, although the MCS precipitation sensitivity to PW is overestimated (by a factor of 2-3) in most models (Figure 5).
   </p>
@@ -129,11 +129,11 @@ order: 5.5
 </div>
 
 <div class="indent-text">
-  <h2>Summary of DYAMOND Model Biases</h2>
+  <h2>6. Summary of DYAMOND Model Biases</h2>
 </div>
 
 <div class="figure-container">
-  <img src="/images/keyfindings_table2.gif" 
+  <img src="/images/keyfindings_table2_small.gif" 
        alt="Summary of Model Biases" 
        style="max-width: 100%; height: auto;" 
        onclick="openLightbox('/images/keyfindings_table2.gif')">
@@ -141,3 +141,31 @@ order: 5.5
     <em>Table 2. Summary of model biases in simulated MCS characteristics. Note: An “X” in the bias sign column indicates fewer than 50% models share the same bias sign. Color shading in each cell represents the confidence based on agreement across the tracker ensemble: high confidence (green), low confidence (orange). Bold texts highlights instances of large mean bias or large intermodal spread accompanied by high confidence.</em>
   </div>
 </div>
+
+<!-- Lightbox Modal -->
+<div id="lightbox" class="lightbox" onclick="closeLightbox()">
+  <img id="lightbox-img" alt="Large Image">
+</div>
+
+<script>
+  // Open the lightbox
+  function openLightbox(imageSrc) {
+    const lightbox = document.getElementById('lightbox');
+    const lightboxImg = document.getElementById('lightbox-img');
+    
+    // Set the source of the lightbox image dynamically
+    lightboxImg.src = imageSrc;
+
+    // Show the lightbox
+    lightbox.style.display = 'flex';
+  }
+
+  // Close the lightbox
+  function closeLightbox() {
+    const lightbox = document.getElementById('lightbox');
+    lightbox.style.display = 'none'; // Hide the lightbox
+  }
+</script>
+
+</body>
+</html>
