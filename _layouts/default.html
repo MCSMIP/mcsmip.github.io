@@ -15,23 +15,38 @@
 
     <script>
       document.addEventListener("DOMContentLoaded", function() {
-        // Open the lightbox
         window.openLightbox = function(imageSrc) {
+          console.log("openLightbox called with:", imageSrc);
           const lightbox = document.getElementById('lightbox');
           const lightboxImg = document.getElementById('lightbox-img');
-          
-          // Set the source of the lightbox image dynamically
+    
+          if (!lightbox || !lightboxImg) {
+            console.error("Lightbox elements not found!");
+            return;
+          }
+    
           lightboxImg.src = imageSrc;
-  
-          // Show the lightbox
           lightbox.style.display = 'flex';
+          document.body.style.cursor = "pointer"; // Ensure pointer stays
         };
-  
-        // Close the lightbox
+    
         window.closeLightbox = function() {
           const lightbox = document.getElementById('lightbox');
-          lightbox.style.display = 'none'; // Hide the lightbox
+          if (lightbox) {
+            lightbox.style.display = 'none';
+          }
+          document.body.style.cursor = "default"; // Reset when closing
         };
+    
+        document.querySelectorAll(".figure-container img").forEach(img => {
+          img.addEventListener("click", function() {
+            const fullImageSrc = this.getAttribute("data-fullsize");
+            if (fullImageSrc) {
+              openLightbox(fullImageSrc);
+              document.body.style.cursor = "pointer"; // Force pointer on open
+            }
+          });
+        });
       });
     </script>
     
