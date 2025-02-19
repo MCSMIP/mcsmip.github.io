@@ -2,8 +2,7 @@ name: Deploy PR Preview to GitHub Pages
 
 on:
   pull_request:
-    types: [opened, synchronize, reopened]
-
+    types: [opened, synchronize, reopened]  # Trigger for all PR events
 
 jobs:
   deploy-preview:
@@ -14,30 +13,21 @@ jobs:
       - name: Checkout PR branch
         uses: actions/checkout@v2
         with:
-          fetch-depth: 1  # Only fetch the latest commit for efficiency
+          fetch-depth: 1
 
-      # Set up Ruby with version 3.1.x
-      - name: Set up Ruby 3.1.x
-        uses: ruby/setup-ruby@v1
-        with:
-          ruby-version: 3.1  # Ensuring Ruby 3.1.x is used
+      # Set up Hugo (Install Hugo as a NodeJS-based site generator)
+      - name: Set up Hugo
+        uses: peaceiris/actions-hugo@v2
 
-      # Install dependencies (this should work with Bundler 3.x now)
-      - name: Install dependencies
-        run: |
-          gem install bundler # Install latest Bundler (3.x) which is compatible with Ruby >= 3.1.0
-          bundle install
-
-      # Build the site
-      - name: Build the site with Jekyll
-        run: |
-          bundle exec jekyll build
+      # Build the Hugo site
+      - name: Build the site with Hugo
+        run: hugo
 
       # Deploy to GitHub Pages Preview
       - name: Deploy to GitHub Pages Preview
         uses: peaceiris/actions-gh-pages@v3
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./_site  # Location of your built site
-          publish_branch: gh-pages  # GitHub Pages branch
-          destination_dir: preview/${{ github.event.pull_request.number }}  # Preview folder
+          publish_dir: ./public  # Hugo output folder
+          publish_branch: gh-pages
+          destination_dir: preview/${{ github.event.pull_request.number }}
