@@ -1,0 +1,563 @@
+<!DOCTYPE html>
+<html lang="en-us">
+
+  <head>
+  <link href="http://gmpg.org/xfn/11" rel="profile">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+
+  <!-- Enable responsiveness on mobile devices-->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+
+  <title>
+    
+      Advanced examples &middot; MCSMIP
+    
+  </title>
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="//public/css/poole.css">
+  <link rel="stylesheet" href="//public/css/syntax.css">
+  <link rel="stylesheet" href="//public/css/hyde.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=PT+Sans:400,400italic,700|Abril+Fatface">
+
+  <!-- Icons -->
+  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="/public/apple-touch-icon-144-precomposed.png">
+  <link rel="shortcut icon" href="/public/favicon.ico">
+
+  <!-- RSS -->
+  <link rel="alternate" type="application/rss+xml" title="RSS" href="/atom.xml">
+
+  <!-- Add custom styles for header navigation -->
+  <style>
+    /* Header navigation styling */
+    .header-nav {
+      background-color: darkgray;  /* Set the background to black */
+      padding: 20px;  /* Add some padding for spacing */
+    }
+
+    .header-nav ul {
+      list-style-type: none;
+      margin: 0;
+      padding: 0;
+      display: flex;  /* Use flexbox to align the items horizontally */
+    }
+
+    .header-nav li {
+      margin-right: 20px;  /* Space between the items */
+    }
+
+    .header-link {
+      color: white;  /* Set the link color to white */
+      text-decoration: none;  /* Remove the default underline */
+      font-size: 22px;
+      padding: 8px;
+    }
+
+    .header-link:hover {
+      color: #ffcc00;  /* Change color on hover for better interactivity */
+    }
+
+    /* Custom Styling for Subpage Title and Description */
+    .subpage-title-description {
+      text-align: center;  /* Center the text */
+      margin-top: 25px;  /* Space from the top */
+      font-family: 'PT Sans', sans-serif;  /* Same font as in the sidebar */
+    }
+
+    .subpage-title-description h1 {
+      font-size: 2.5rem;  /* Adjust as needed */
+      margin-bottom: 0.5rem;
+    }
+
+    .subpage-title-description p {
+      font-size: 1.25rem;  /* Adjust as needed */
+      color: #777;  /* Lighter color for description */
+    }
+  </style>
+</head>
+
+<body>
+  <!-- Include sidebar for all pages -->
+  <div class="sidebar">
+  <!-- Load Octicons CSS -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/octicons/4.4.0/font/octicons.min.css">
+
+  <div class="container sidebar-sticky">
+    <div class="sidebar-about">
+      <h1>
+        <a href="/">
+          MCSMIP
+        </a>
+      </h1>
+      <p class="lead">Mesoscale Convective Systems tracking Method Intercomparison</p>
+    </div>
+
+    <nav class="sidebar-nav">
+      <!-- Home Link: Ensure it's displayed only once -->
+      <a class="sidebar-nav-item" href="/">Home</a>
+
+      
+
+      
+      
+
+      <!-- Display parent pages and their children -->
+      
+        
+          
+        
+      
+        
+      
+        
+          
+        
+      
+        
+          
+            <!-- Display parent page if it doesn't have a parent -->
+            
+              <a class="sidebar-nav-item" href="/design/">Experimental design</a>
+
+              <!-- Find and display child pages -->
+              
+              
+            
+          
+        
+      
+        
+          
+            <!-- Display parent page if it doesn't have a parent -->
+            
+              <a class="sidebar-nav-item" href="/datasets/">Data Access and Policies</a>
+
+              <!-- Find and display child pages -->
+              
+              
+            
+          
+        
+      
+        
+          
+            <!-- Display parent page if it doesn't have a parent -->
+            
+              <a class="sidebar-nav-item" href="/participants/">Participants</a>
+
+              <!-- Find and display child pages -->
+              
+              
+            
+          
+        
+      
+        
+          
+            <!-- Display parent page if it doesn't have a parent -->
+            
+              <a class="sidebar-nav-item" href="/publications/">Publications</a>
+
+              <!-- Find and display child pages -->
+              
+              
+            
+          
+        
+      
+        
+          
+            <!-- Display parent page if it doesn't have a parent -->
+            
+              <a class="sidebar-nav-item" href="/trackers/">Tracking algorithms</a>
+
+              <!-- Find and display child pages -->
+              
+              
+                <a class="sidebar-nav-item child-item" href="/tracking_algorithms/pyflextrkr/">PyFLEXTRKR</a>
+              
+                <a class="sidebar-nav-item child-item" href="/tracking_algorithms/moaap/">MOAAP</a>
+              
+                <a class="sidebar-nav-item child-item" href="/tracking_algorithms/toocan/">TOOCAN</a>
+              
+                <a class="sidebar-nav-item child-item" href="/tracking_algorithms/tobac/">tobac</a>
+              
+                <a class="sidebar-nav-item child-item" href="/tracking_algorithms/tams/">TAMS</a>
+              
+                <a class="sidebar-nav-item child-item" href="/tracking_algorithms/timps/">TIMPS</a>
+              
+                <a class="sidebar-nav-item child-item" href="/tracking_algorithms/atrackcs/">ATRACKCS</a>
+              
+                <a class="sidebar-nav-item child-item" href="/tracking_algorithms/simpletrack/">simpleTrack</a>
+              
+                <a class="sidebar-nav-item child-item" href="/tracking_algorithms/kfyao/">KFyAO</a>
+              
+                <a class="sidebar-nav-item child-item" href="/tracking_algorithms/dl_tempest_extreme/">DL + TempestExtreme</a>
+              
+            
+          
+        
+      
+        
+          
+            <!-- Display parent page if it doesn't have a parent -->
+            
+              <a class="sidebar-nav-item" href="/key_findings/">Key Findings</a>
+
+              <!-- Find and display child pages -->
+              
+              
+            
+          
+        
+      
+        
+          
+            <!-- Display parent page if it doesn't have a parent -->
+            
+          
+        
+      
+        
+          
+            <!-- Display parent page if it doesn't have a parent -->
+            
+          
+        
+      
+        
+          
+            <!-- Display parent page if it doesn't have a parent -->
+            
+          
+        
+      
+        
+          
+            <!-- Display parent page if it doesn't have a parent -->
+            
+          
+        
+      
+        
+          
+            <!-- Display parent page if it doesn't have a parent -->
+            
+          
+        
+      
+        
+          
+            <!-- Display parent page if it doesn't have a parent -->
+            
+          
+        
+      
+        
+          
+            <!-- Display parent page if it doesn't have a parent -->
+            
+          
+        
+      
+        
+          
+            <!-- Display parent page if it doesn't have a parent -->
+            
+          
+        
+      
+        
+          
+            <!-- Display parent page if it doesn't have a parent -->
+            
+          
+        
+      
+        
+          
+            <!-- Display parent page if it doesn't have a parent -->
+            
+          
+        
+      
+
+      <!-- GitHub repository link with Octicon (fallback to SVG if Octicon doesn't work) -->
+      <a class="sidebar-nav-item" href="https://github.com/WACCEM/MCSMIP-DYAMOND">
+        <span class="octicon octicon-mark-github"></span>
+        <svg height="24" viewBox="0 0 16 16" version="1.1" width="24" aria-hidden="true" style="display: none;">
+          <path fill="currentColor" fill-rule="evenodd" d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"></path>
+        </svg>
+        GitHub MCSMIP-DYAMOND
+      </a>
+    </nav>
+
+    <p>&copy; 2025.</p>
+  </div>
+</div>
+
+
+  <!-- Common header for all pages -->
+  <div class="subpage-title-description">
+    <h1>MCSMIP</h1>
+    <p>Mesoscale Convective Systems tracking Method Intercomparison</p>
+  </div>
+
+  <!-- Navigation links (Header) -->
+  <nav class="header-nav">
+    <ul>
+      <li><a href="//index.html" class="header-link">Home</a></li>
+
+      <!-- Dynamically list pages excluding "Mesoscale..." page and child pages -->
+      
+      
+        
+      
+        
+          
+            <li><a href="//tracking_algorithms/atrackcs/" class="header-link">ATRACKCS</a></li>
+          
+        
+      
+        
+          
+            <li><a href="//datasets/" class="header-link">Data Access and Policies</a></li>
+          
+        
+      
+        
+          
+            <li><a href="//design/" class="header-link">Experimental design</a></li>
+          
+        
+      
+        
+          
+            <li><a href="//tracking_algorithms/dl_tempest_extreme/" class="header-link">DL + TempestExtreme</a></li>
+          
+        
+      
+        
+          
+        
+      
+        
+          
+            <li><a href="//key_findings/" class="header-link">Key Findings</a></li>
+          
+        
+      
+        
+          
+            <li><a href="//tracking_algorithms/kfyao/" class="header-link">KFyAO</a></li>
+          
+        
+      
+        
+          
+            <li><a href="//tracking_algorithms/moaap/" class="header-link">MOAAP</a></li>
+          
+        
+      
+        
+          
+            <li><a href="//participants/" class="header-link">Participants</a></li>
+          
+        
+      
+        
+          
+            <li><a href="//publications/" class="header-link">Publications</a></li>
+          
+        
+      
+        
+          
+            <li><a href="//tracking_algorithms/pyflextrkr/" class="header-link">PyFLEXTRKR</a></li>
+          
+        
+      
+        
+          
+            <li><a href="//tracking_algorithms/simpletrack/" class="header-link">simpleTrack</a></li>
+          
+        
+      
+        
+          
+            <li><a href="//tracking_algorithms/tams/" class="header-link">TAMS</a></li>
+          
+        
+      
+        
+          
+            <li><a href="//tracking_algorithms/timps/" class="header-link">TIMPS</a></li>
+          
+        
+      
+        
+          
+            <li><a href="//tracking_algorithms/tobac/" class="header-link">tobac</a></li>
+          
+        
+      
+        
+          
+            <li><a href="//tracking_algorithms/toocan/" class="header-link">TOOCAN</a></li>
+          
+        
+      
+        
+          
+            <li><a href="//trackers/" class="header-link">Tracking algorithms</a></li>
+          
+        
+      
+        
+      
+    </ul>
+  </nav>
+</body>
+
+
+  <body>
+
+    
+
+    <div class="content container">
+      <div class="post">
+  <h1 class="post-title">Advanced examples</h1>
+  <span class="post-date">01 Jan 2017</span>
+  <p><img src="https://user-images.githubusercontent.com/4943215/55412536-edbba180-5567-11e9-9c70-6d33bca3f8ed.jpg" alt="Swiss Alps" /></p>
+
+<h2 id="mathjax">MathJax</h2>
+
+<p>You can enable MathJax by setting <code>mathjax: true</code> on a page or globally in the <code>_config.yml</code>. Some examples:</p>
+
+<p><a href="https://en.wikipedia.org/wiki/Euler%27s_formula">Euler’s formula</a> relates the  complex exponential function to the trigonometric functions.</p>
+
+\[e^{i\theta}=\cos(\theta)+i\sin(\theta)\]
+
+<p>The <a href="https://en.wikipedia.org/wiki/Lagrangian_mechanics">Euler-Lagrange</a> differential equation is the fundamental equation of calculus of variations.</p>
+
+\[\frac{\mathrm{d}}{\mathrm{d}t} \left ( \frac{\partial L}{\partial \dot{q}} \right ) = \frac{\partial L}{\partial q}\]
+
+<p>The <a href="https://en.wikipedia.org/wiki/Schr%C3%B6dinger_equation">Schrödinger equation</a> describes how the quantum state of a quantum system changes with time.</p>
+
+\[i\hbar\frac{\partial}{\partial t} \Psi(\mathbf{r},t) = \left [ \frac{-\hbar^2}{2\mu}\nabla^2 + V(\mathbf{r},t)\right ] \Psi(\mathbf{r},t)\]
+
+<h2 id="code">Code</h2>
+
+<p>Embed code by putting <code>{% highlight language %}</code> <code>{% endhighlight %}</code> blocks around it. Adding the parameter <code>linenos</code> will show source lines besides the code.</p>
+
+<figure class="highlight"><pre><code class="language-c" data-lang="c"><span class="k">static</span> <span class="kt">void</span> <span class="nf">asyncEnabled</span><span class="p">(</span><span class="n">Dict</span><span class="o">*</span> <span class="n">args</span><span class="p">,</span> <span class="kt">void</span><span class="o">*</span> <span class="n">vAdmin</span><span class="p">,</span> <span class="n">String</span><span class="o">*</span> <span class="n">txid</span><span class="p">,</span> <span class="k">struct</span> <span class="n">Allocator</span><span class="o">*</span> <span class="n">requestAlloc</span><span class="p">)</span>
+<span class="p">{</span>
+    <span class="k">struct</span> <span class="n">Admin</span><span class="o">*</span> <span class="n">admin</span> <span class="o">=</span> <span class="n">Identity_check</span><span class="p">((</span><span class="k">struct</span> <span class="n">Admin</span><span class="o">*</span><span class="p">)</span> <span class="n">vAdmin</span><span class="p">);</span>
+    <span class="kt">int64_t</span> <span class="n">enabled</span> <span class="o">=</span> <span class="n">admin</span><span class="o">-&gt;</span><span class="n">asyncEnabled</span><span class="p">;</span>
+    <span class="n">Dict</span> <span class="n">d</span> <span class="o">=</span> <span class="n">Dict_CONST</span><span class="p">(</span><span class="n">String_CONST</span><span class="p">(</span><span class="s">"asyncEnabled"</span><span class="p">),</span> <span class="n">Int_OBJ</span><span class="p">(</span><span class="n">enabled</span><span class="p">),</span> <span class="nb">NULL</span><span class="p">);</span>
+    <span class="n">Admin_sendMessage</span><span class="p">(</span><span class="o">&amp;</span><span class="n">d</span><span class="p">,</span> <span class="n">txid</span><span class="p">,</span> <span class="n">admin</span><span class="p">);</span>
+<span class="p">}</span></code></pre></figure>
+
+<h2 id="gists">Gists</h2>
+
+<p>With the <code>jekyll-gist</code> plugin, which is preinstalled on Github Pages, you can embed gists simply by using the <code>gist</code> command:</p>
+
+<script src="https://gist.github.com/5555251.js?file=gist.md"></script>
+
+<h2 id="images">Images</h2>
+
+<p>Upload an image to the <em>assets</em> folder and embed it with <code>![title](/assets/name.jpg))</code>. Keep in mind that the path needs to be adjusted if Jekyll is run inside a subfolder.</p>
+
+<p>A wrapper <code>div</code> with the class <code>large</code> can be used to increase the width of an image or iframe.</p>
+
+<p><img src="https://user-images.githubusercontent.com/4943215/55412447-bcdb6c80-5567-11e9-8d12-b1e35fd5e50c.jpg" alt="Flower" /></p>
+
+<p><a href="https://unsplash.com/photos/iGrsa9rL11o">Flower</a> by Tj Holowaychuk</p>
+
+<h2 id="embedded-content">Embedded content</h2>
+
+<p>You can also embed a lot of stuff, for example from YouTube, using the <code>embed.html</code> include.</p>
+
+<div style="position: relative; margin: 1.5em 0; padding-bottom: 56.25%;">
+  <iframe style="position: absolute;" src="https://www.youtube.com/embed/_C0A5zX-iqM" width="100%" height="100%" frameborder="0" allowfullscreen=""></iframe>
+</div>
+
+
+</div>
+
+<div class="related">
+  <h2>Related Posts</h2>
+  <ul class="related-posts">
+    
+      <li>
+        <h3>
+          <a href="/2017/03/01/welcome-to-jekyll/">
+            Welcome to Jekyll
+            <small>01 Mar 2017</small>
+          </a>
+        </h3>
+      </li>
+    
+      <li>
+        <h3>
+          <a href="/2017/02/01/markdown-examples/">
+            Markdown examples
+            <small>01 Feb 2017</small>
+          </a>
+        </h3>
+      </li>
+    
+      <li>
+        <h3>
+          <a href="/2013/12/28/introducing-hyde/">
+            Introducing Hyde
+            <small>28 Dec 2013</small>
+          </a>
+        </h3>
+      </li>
+    
+  </ul>
+</div>
+
+    </div>
+
+    <script>
+      document.addEventListener("DOMContentLoaded", function() {
+        window.openLightbox = function(imageSrc) {
+          console.log("openLightbox called with:", imageSrc);
+          const lightbox = document.getElementById('lightbox');
+          const lightboxImg = document.getElementById('lightbox-img');
+    
+          if (!lightbox || !lightboxImg) {
+            console.error("Lightbox elements not found!");
+            return;
+          }
+    
+          lightboxImg.src = imageSrc;
+          lightbox.style.display = 'flex';
+          document.body.style.cursor = "pointer"; // Ensure pointer stays
+        };
+    
+        window.closeLightbox = function() {
+          const lightbox = document.getElementById('lightbox');
+          if (lightbox) {
+            lightbox.style.display = 'none';
+          }
+          document.body.style.cursor = "default"; // Reset when closing
+        };
+    
+        document.querySelectorAll(".figure-container img").forEach(img => {
+          img.addEventListener("click", function() {
+            const fullImageSrc = this.getAttribute("data-fullsize");
+            if (fullImageSrc) {
+              openLightbox(fullImageSrc);
+              document.body.style.cursor = "pointer"; // Force pointer on open
+            }
+          });
+        });
+      });
+    </script>
+    
+  </body>
+</html>

@@ -1,0 +1,628 @@
+<!DOCTYPE html>
+<html lang="en-us">
+
+  <head>
+  <link href="http://gmpg.org/xfn/11" rel="profile">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+
+  <!-- Enable responsiveness on mobile devices-->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+
+  <title>
+    
+      Key Findings &middot; MCSMIP
+    
+  </title>
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="//public/css/poole.css">
+  <link rel="stylesheet" href="//public/css/syntax.css">
+  <link rel="stylesheet" href="//public/css/hyde.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=PT+Sans:400,400italic,700|Abril+Fatface">
+
+  <!-- Icons -->
+  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="/public/apple-touch-icon-144-precomposed.png">
+  <link rel="shortcut icon" href="/public/favicon.ico">
+
+  <!-- RSS -->
+  <link rel="alternate" type="application/rss+xml" title="RSS" href="/atom.xml">
+
+  <!-- Add custom styles for header navigation -->
+  <style>
+    /* Header navigation styling */
+    .header-nav {
+      background-color: darkgray;  /* Set the background to black */
+      padding: 20px;  /* Add some padding for spacing */
+    }
+
+    .header-nav ul {
+      list-style-type: none;
+      margin: 0;
+      padding: 0;
+      display: flex;  /* Use flexbox to align the items horizontally */
+    }
+
+    .header-nav li {
+      margin-right: 20px;  /* Space between the items */
+    }
+
+    .header-link {
+      color: white;  /* Set the link color to white */
+      text-decoration: none;  /* Remove the default underline */
+      font-size: 22px;
+      padding: 8px;
+    }
+
+    .header-link:hover {
+      color: #ffcc00;  /* Change color on hover for better interactivity */
+    }
+
+    /* Custom Styling for Subpage Title and Description */
+    .subpage-title-description {
+      text-align: center;  /* Center the text */
+      margin-top: 25px;  /* Space from the top */
+      font-family: 'PT Sans', sans-serif;  /* Same font as in the sidebar */
+    }
+
+    .subpage-title-description h1 {
+      font-size: 2.5rem;  /* Adjust as needed */
+      margin-bottom: 0.5rem;
+    }
+
+    .subpage-title-description p {
+      font-size: 1.25rem;  /* Adjust as needed */
+      color: #777;  /* Lighter color for description */
+    }
+  </style>
+</head>
+
+<body>
+  <!-- Include sidebar for all pages -->
+  <div class="sidebar">
+  <!-- Load Octicons CSS -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/octicons/4.4.0/font/octicons.min.css">
+
+  <div class="container sidebar-sticky">
+    <div class="sidebar-about">
+      <h1>
+        <a href="/">
+          MCSMIP
+        </a>
+      </h1>
+      <p class="lead">Mesoscale Convective Systems tracking Method Intercomparison</p>
+    </div>
+
+    <nav class="sidebar-nav">
+      <!-- Home Link: Ensure it's displayed only once -->
+      <a class="sidebar-nav-item" href="/">Home</a>
+
+      
+
+      
+      
+
+      <!-- Display parent pages and their children -->
+      
+        
+          
+        
+      
+        
+      
+        
+          
+        
+      
+        
+          
+            <!-- Display parent page if it doesn't have a parent -->
+            
+              <a class="sidebar-nav-item" href="/design/">Experimental design</a>
+
+              <!-- Find and display child pages -->
+              
+              
+            
+          
+        
+      
+        
+          
+            <!-- Display parent page if it doesn't have a parent -->
+            
+              <a class="sidebar-nav-item" href="/datasets/">Data Access and Policies</a>
+
+              <!-- Find and display child pages -->
+              
+              
+            
+          
+        
+      
+        
+          
+            <!-- Display parent page if it doesn't have a parent -->
+            
+              <a class="sidebar-nav-item" href="/participants/">Participants</a>
+
+              <!-- Find and display child pages -->
+              
+              
+            
+          
+        
+      
+        
+          
+            <!-- Display parent page if it doesn't have a parent -->
+            
+              <a class="sidebar-nav-item" href="/publications/">Publications</a>
+
+              <!-- Find and display child pages -->
+              
+              
+            
+          
+        
+      
+        
+          
+            <!-- Display parent page if it doesn't have a parent -->
+            
+              <a class="sidebar-nav-item" href="/trackers/">Tracking algorithms</a>
+
+              <!-- Find and display child pages -->
+              
+              
+                <a class="sidebar-nav-item child-item" href="/tracking_algorithms/pyflextrkr/">PyFLEXTRKR</a>
+              
+                <a class="sidebar-nav-item child-item" href="/tracking_algorithms/moaap/">MOAAP</a>
+              
+                <a class="sidebar-nav-item child-item" href="/tracking_algorithms/toocan/">TOOCAN</a>
+              
+                <a class="sidebar-nav-item child-item" href="/tracking_algorithms/tobac/">tobac</a>
+              
+                <a class="sidebar-nav-item child-item" href="/tracking_algorithms/tams/">TAMS</a>
+              
+                <a class="sidebar-nav-item child-item" href="/tracking_algorithms/timps/">TIMPS</a>
+              
+                <a class="sidebar-nav-item child-item" href="/tracking_algorithms/atrackcs/">ATRACKCS</a>
+              
+                <a class="sidebar-nav-item child-item" href="/tracking_algorithms/simpletrack/">simpleTrack</a>
+              
+                <a class="sidebar-nav-item child-item" href="/tracking_algorithms/kfyao/">KFyAO</a>
+              
+                <a class="sidebar-nav-item child-item" href="/tracking_algorithms/dl_tempest_extreme/">DL + TempestExtreme</a>
+              
+            
+          
+        
+      
+        
+          
+            <!-- Display parent page if it doesn't have a parent -->
+            
+              <a class="sidebar-nav-item active" href="/key_findings/">Key Findings</a>
+
+              <!-- Find and display child pages -->
+              
+              
+            
+          
+        
+      
+        
+          
+            <!-- Display parent page if it doesn't have a parent -->
+            
+          
+        
+      
+        
+          
+            <!-- Display parent page if it doesn't have a parent -->
+            
+          
+        
+      
+        
+          
+            <!-- Display parent page if it doesn't have a parent -->
+            
+          
+        
+      
+        
+          
+            <!-- Display parent page if it doesn't have a parent -->
+            
+          
+        
+      
+        
+          
+            <!-- Display parent page if it doesn't have a parent -->
+            
+          
+        
+      
+        
+          
+            <!-- Display parent page if it doesn't have a parent -->
+            
+          
+        
+      
+        
+          
+            <!-- Display parent page if it doesn't have a parent -->
+            
+          
+        
+      
+        
+          
+            <!-- Display parent page if it doesn't have a parent -->
+            
+          
+        
+      
+        
+          
+            <!-- Display parent page if it doesn't have a parent -->
+            
+          
+        
+      
+        
+          
+            <!-- Display parent page if it doesn't have a parent -->
+            
+          
+        
+      
+
+      <!-- GitHub repository link with Octicon (fallback to SVG if Octicon doesn't work) -->
+      <a class="sidebar-nav-item" href="https://github.com/WACCEM/MCSMIP-DYAMOND">
+        <span class="octicon octicon-mark-github"></span>
+        <svg height="24" viewBox="0 0 16 16" version="1.1" width="24" aria-hidden="true" style="display: none;">
+          <path fill="currentColor" fill-rule="evenodd" d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"></path>
+        </svg>
+        GitHub MCSMIP-DYAMOND
+      </a>
+    </nav>
+
+    <p>&copy; 2025.</p>
+  </div>
+</div>
+
+
+  <!-- Common header for all pages -->
+  <div class="subpage-title-description">
+    <h1>MCSMIP</h1>
+    <p>Mesoscale Convective Systems tracking Method Intercomparison</p>
+  </div>
+
+  <!-- Navigation links (Header) -->
+  <nav class="header-nav">
+    <ul>
+      <li><a href="//index.html" class="header-link">Home</a></li>
+
+      <!-- Dynamically list pages excluding "Mesoscale..." page and child pages -->
+      
+      
+        
+      
+        
+          
+            <li><a href="//tracking_algorithms/atrackcs/" class="header-link">ATRACKCS</a></li>
+          
+        
+      
+        
+          
+            <li><a href="//datasets/" class="header-link">Data Access and Policies</a></li>
+          
+        
+      
+        
+          
+            <li><a href="//design/" class="header-link">Experimental design</a></li>
+          
+        
+      
+        
+          
+            <li><a href="//tracking_algorithms/dl_tempest_extreme/" class="header-link">DL + TempestExtreme</a></li>
+          
+        
+      
+        
+          
+        
+      
+        
+          
+            <li><a href="//key_findings/" class="header-link">Key Findings</a></li>
+          
+        
+      
+        
+          
+            <li><a href="//tracking_algorithms/kfyao/" class="header-link">KFyAO</a></li>
+          
+        
+      
+        
+          
+            <li><a href="//tracking_algorithms/moaap/" class="header-link">MOAAP</a></li>
+          
+        
+      
+        
+          
+            <li><a href="//participants/" class="header-link">Participants</a></li>
+          
+        
+      
+        
+          
+            <li><a href="//publications/" class="header-link">Publications</a></li>
+          
+        
+      
+        
+          
+            <li><a href="//tracking_algorithms/pyflextrkr/" class="header-link">PyFLEXTRKR</a></li>
+          
+        
+      
+        
+          
+            <li><a href="//tracking_algorithms/simpletrack/" class="header-link">simpleTrack</a></li>
+          
+        
+      
+        
+          
+            <li><a href="//tracking_algorithms/tams/" class="header-link">TAMS</a></li>
+          
+        
+      
+        
+          
+            <li><a href="//tracking_algorithms/timps/" class="header-link">TIMPS</a></li>
+          
+        
+      
+        
+          
+            <li><a href="//tracking_algorithms/tobac/" class="header-link">tobac</a></li>
+          
+        
+      
+        
+          
+            <li><a href="//tracking_algorithms/toocan/" class="header-link">TOOCAN</a></li>
+          
+        
+      
+        
+          
+            <li><a href="//trackers/" class="header-link">Tracking algorithms</a></li>
+          
+        
+      
+        
+      
+    </ul>
+  </nav>
+</body>
+
+
+  <body>
+
+    
+
+    <div class="content container">
+      <div class="page">
+  <h1 class="page-title">Key Findings</h1>
+  <style>
+  /* Increase font size for this page only */
+  body {
+    font-size: 21px; /* Adjust this value as needed */
+  }
+
+  /* Optionally, target specific elements */
+  h1 {
+    font-size: 2.5em;
+  }
+
+  p {
+    font-size: 1.2em;
+  }
+</style>
+
+
+<div class="indent-text">
+  <h1>Key Findings from MCSMIP-DYAMOND</h1>
+  <p>
+    We comprehensively evaluate tropical mesoscale convective system (MCS) characteristics in the DYAMOND <a href="https://doi.org/10.1186/s40645-019-0304-z">(Stevens et al. 2019)</a> global km-scale model simulations for both summer and winter phases. Using <a href="https://mcsmip.github.io/trackers/">ten different feature trackers</a> applied to simulations and satellite observations, we assess MCS frequency, precipitation, and other key characteristics.
+  </p>
+</div>
+
+<div class="indent-text">
+  <h2>1. MCS Characteristics from Participated Trackers</h2>
+  <p>
+    Table 1 summarizes the MCS characteristics derived from each tracker relative to the average characteristics across the tracker ensemble based on observations. Rather than providing a ranking, the table illustrates how the behavior of each tracker compares to others, as no reference tracking dataset on the global scale exists for the study period to quantitatively validate the derived MCS characteristics. Future research using any of the trackers examined in this study should carefully consider the behavior of their selected tracker, particularly when comparing results across studies, as differences between trackers may significantly influence outcomes.
+  </p>
+</div>
+
+<div class="figure-container">
+  <img src="//images/keyfindings_table1_small.gif" 
+       alt="Tracker MCS Properties" 
+       style="max-width: 100%; height: auto;" 
+       onclick="openLightbox('//images/keyfindings_table1.gif')">
+  <div class="figure-caption">
+    <em>Table 1. Characteristics of MCS properties for each tracker relative to other trackers. Qualitative assessments are based on comparisons of tracker results applied to observations.
+    </em>
+  </div>
+</div>
+
+
+<div class="indent-text">
+  <h2>2. MCS Frequency and Precipitation Amount Biases</h2>
+  <p> 
+    Despite substantial differences (a factor of 2-3) in observed MCS frequency and their precipitation contribution among the trackers, model-observation differences in MCS statistics are more consistent across the tracker ensemble.
+  </p>
+  <p> 
+    Models are generally skillful in simulating tropical mean MCS frequency, with mean biases of -2% to 8% over land and -8% to 8% over ocean (summer vs. winter), though large variability exists among the models (Figure 1 left column). Most models underestimate MCS precipitation amount (-14% over land, -28% to -37% over ocean, Figure 1 middle column) and their contribution to total precipitation (Figure 1 right column), with smaller multi-model mean biases over land (-13%) than over ocean (-21%). The smaller bias over land may be related to the stronger diurnal cycle that drives MCS development compared to that over the ocean.
+  </p>
+</div>
+
+<div class="figure-container">
+  <img src="//images/keyfindings_globalmap_3biases_small.gif" 
+       alt="Gloabl Map and Biases" 
+       style="max-width: 100%; height: auto;" 
+       onclick="openLightbox('//images/keyfindings_globalmap_3biases.gif')">
+  <div class="figure-caption">
+    <em>
+      Figure 1. Global distribution of multi-tracker mean observed MCS statistics (top two rows): MCS frequency (left column), MCS precipitation amount (middle column), and MCS precipitation fraction (right column). Model biases (bottom two rows) are shown for each model (y-axis) and each model (x-axis). Dark green shadings denote high bias, dark brown shadings denote low bias.
+    </em>
+  </div>
+</div>
+
+<div class="indent-text">
+  <h2>3. MCS Characteristics</h2>
+  <p>
+    MCS cloud shield characteristics are better simulated than precipitation (Figure 2). Most models overestimate MCS mean precipitation intensity (by a factor of 2-3) and underestimate stratiform rain contribution (up to a factor of 2), particularly over land (Figure 3).
+  </p>
+</div>
+
+<div class="figure-container">
+  <img src="//images/keyfindings_mcs_characteristics_small.gif" 
+       alt="MCS Characteristics" 
+       style="max-width: 100%; height: auto;" 
+       onclick="openLightbox('//images/keyfindings_mcs_characteristics.gif')">
+  <div class="figure-caption">
+    <em>
+      Figure 2. Relative difference in the median values of MCS properties between simulations and observations for each model (x-axis) and each tracker (y-axis). Dark red shadings denote high bias, dark blue shadings denote low bias. Top row: MCS cloud shield characteristics, bottom row: MCS precipitation characteristics. (a),(g) MCS lifetime, (b),(h) lifetime-maximum cold cloud shield area, (c),(i) lifetime-minimum Tb, (d),(j) lifetime-total rain volume, (e),(k) PF mean rain rate, (f),(l) heavy rain (> 10 mm h<sup>-1</sup>) to total rain volume ratio.
+    </em>
+  </div>
+</div>
+
+<div class="figure-container">
+  <img src="//images/keyfindings_rainrate_contribution_small.gif" 
+       alt="MCS Characteristics" 
+       style="max-width: 100%; height: auto;" 
+       onclick="openLightbox('//images/keyfindings_rainrate_contribution.gif')">
+  <div class="figure-caption">
+    <em>
+      Figure 3. Contribution of hourly, 0.1° rain rates to tropical MCS rainfall amount based on results from PyFLEXTRKR for (a),(b) oceanic MCS and (c),(d) land MCS.</em>
+  </div>
+</div>
+
+<div class="indent-text">
+  <h2>4. Moisture Evolution Associated with MCSs</h2>
+  <p>
+    Models capture the environmental moistening rate leading up to MCS initiation both over ocean and land, but a large inter-model spread in the magnitude of PW is found (Figure 4).
+  </p>
+</div>
+
+<div class="figure-container">
+  <img src="//images/keyfindings_PWevolution_small.gif" 
+       alt="MCS PW Evolution" 
+       style="max-width: 100%; height: auto;" 
+       onclick="openLightbox('//images/keyfindings_PWevolution.gif')">
+  <div class="figure-caption">
+    <em>
+      Figure 4. Composite lifecycle evolution of precipitable water (PW) associated with tropical MCSs over (a),(c) ocean, and (b),(d) land. Each row shows results from a tracker. Thick black lines are tracking using observations with IMERG v6, gray lines are tracking using observations with IMERG v7. Blue shaded periods are 24 hours before MCS initiation at the same location as initiation, while the white periods are following the MCS tracks.      
+    </em>
+  </div>
+</div>
+
+
+<div class="indent-text">
+  <h2>5. MCS Precipitation Intensity Biases</h2>
+  <p>
+    Most models simulate the exponential increase of MCS precipitation intensity beyond the critical PW value over ocean, although the MCS precipitation sensitivity to PW is overestimated (by a factor of 2-3) in most models (Figure 5).
+  </p>
+</div>
+
+<div class="figure-container">
+  <img src="//images/keyfindings_PWrainrate_small.gif" 
+       alt="MCS PW vs. Rainrate" 
+       style="max-width: 100%; height: auto;" 
+       onclick="openLightbox('//images/keyfindings_PWrainrate.gif')">
+  <div class="figure-caption">
+    <em>
+      Figure 5. Mean tropical MCS hourly rain rate as a function of collocated precipitable water (PW) over ocean for (a) summer and (b) winter.      
+    </em>
+  </div>
+</div>
+
+<div class="indent-text">
+  <h2>6. Summary of DYAMOND Model Biases</h2>
+</div>
+
+<div class="figure-container">
+  <img src="//images/keyfindings_table2_small.gif" 
+       alt="Summary of Model Biases" 
+       style="max-width: 100%; height: auto;" 
+       onclick="openLightbox('//images/keyfindings_table2.gif')">
+  <div class="figure-caption">
+    <em>
+      Table 2. Summary of model biases in simulated MCS characteristics. Note: An “X” in the bias sign column indicates fewer than 50% models share the same bias sign. Color shading in each cell represents the confidence based on agreement across the tracker ensemble: high confidence (green), low confidence (orange). Bold texts highlights instances of large mean bias or large intermodal spread accompanied by high confidence.
+    </em>
+  </div>
+</div>
+
+<!-- Lightbox Modal -->
+<div id="lightbox" class="lightbox" onclick="closeLightbox()">
+  <img id="lightbox-img" alt="Large Image">
+</div>
+
+</div>
+
+    </div>
+
+    <script>
+      document.addEventListener("DOMContentLoaded", function() {
+        window.openLightbox = function(imageSrc) {
+          console.log("openLightbox called with:", imageSrc);
+          const lightbox = document.getElementById('lightbox');
+          const lightboxImg = document.getElementById('lightbox-img');
+    
+          if (!lightbox || !lightboxImg) {
+            console.error("Lightbox elements not found!");
+            return;
+          }
+    
+          lightboxImg.src = imageSrc;
+          lightbox.style.display = 'flex';
+          document.body.style.cursor = "pointer"; // Ensure pointer stays
+        };
+    
+        window.closeLightbox = function() {
+          const lightbox = document.getElementById('lightbox');
+          if (lightbox) {
+            lightbox.style.display = 'none';
+          }
+          document.body.style.cursor = "default"; // Reset when closing
+        };
+    
+        document.querySelectorAll(".figure-container img").forEach(img => {
+          img.addEventListener("click", function() {
+            const fullImageSrc = this.getAttribute("data-fullsize");
+            if (fullImageSrc) {
+              openLightbox(fullImageSrc);
+              document.body.style.cursor = "pointer"; // Force pointer on open
+            }
+          });
+        });
+      });
+    </script>
+    
+  </body>
+</html>
