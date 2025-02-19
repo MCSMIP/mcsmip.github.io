@@ -73,44 +73,33 @@
       font-size: 1.25rem;  /* Adjust as needed */
       color: #777;  /* Lighter color for description */
     }
-
-    /* Ensure the header only shows on subpages (not index.html) */
-    .subpage-header {
-      display: block;
-    }
-    .landing-page-header {
-      display: none;
-    }
   </style>
 </head>
 
 <body>
-  <!-- Ensure the header is only shown on subpages (not index.html) -->
-  {% if page.url != "/" %}
-    <div class="subpage-title-description">
-      <h1>{{ site.title }}</h1> 
-      <p>{{ site.description }}</p>
-    </div>
+  <!-- Include sidebar for all pages -->
+  {% include sidebar.html %}
 
-    <!-- Navigation links -->
-    <nav class="header-nav">
-      <ul>
-        <!-- Include the "Home" link on subpages -->
-        <li><a href="{{ site.baseurl }}/index.html" class="header-link">Home</a></li>
+  <!-- Common header for all pages -->
+  <div class="subpage-title-description">
+    <h1>{{ site.title }}</h1>
+    <p>{{ site.description }}</p>
+  </div>
 
-        <!-- Dynamically list pages excluding "Mesoscale..." page and child pages -->
-        {% assign pages_list = site.pages %}
-        {% for page in pages_list %}
-          {% if page.title != null and page.url != "/index.html" and page.url != "/404.html" and page.url != "/archive.html" %}
-            {% if page.title != "Mesoscale Convective Systems tracking Method Intercomparison (MCSMIP)" %}
-              <!-- Exclude pages with a parent field -->
-              {% unless page.parent %}
-                <li><a href="{{ site.baseurl }}{{ page.url }}" class="header-link">{{ page.title }}</a></li>
-              {% endunless %}
-            {% endif %}
+  <!-- Navigation links (Header) -->
+  <nav class="header-nav">
+    <ul>
+      <li><a href="{{ site.baseurl }}/index.html" class="header-link">Home</a></li>
+
+      <!-- Dynamically list pages excluding "Mesoscale..." page and child pages -->
+      {% assign pages_list = site.pages %}
+      {% for page in pages_list %}
+        {% if page.title != null and page.url != "/index.html" and page.url != "/404.html" and page.url != "/archive.html" %}
+          {% if page.title != "Mesoscale Convective Systems tracking Method Intercomparison (MCSMIP)" %}
+            <li><a href="{{ site.baseurl }}{{ page.url }}" class="header-link">{{ page.title }}</a></li>
           {% endif %}
-        {% endfor %}
-      </ul>
-    </nav>
-  {% endif %}
+        {% endif %}
+      {% endfor %}
+    </ul>
+  </nav>
 </body>
