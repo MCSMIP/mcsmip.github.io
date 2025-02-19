@@ -17,17 +17,18 @@ jobs:
           fetch-depth: 1  # Only fetch the latest commit for efficiency
 
       # Set up Ruby version 2.7.8 (compatible with Bundler 2.4.22)
-      - name: Set up Ruby 2.7.8 (for Bundler 2.4.22 compatibility)
+      - name: Set up Ruby 2.7.8
         uses: ruby/setup-ruby@v1
         with:
-          ruby-version: 2.7.8  # This ensures Ruby 2.7.x is installed
+          ruby-version: 2.7.8  # Use Ruby 2.7.x
 
-      # Install Bundler 2.4.22 (for Ruby 2.7)
-      - name: Install Bundler 2.4.22
+      # Uninstall any version of Bundler that's incompatible, then install Bundler 2.4.22 explicitly
+      - name: Force Install Bundler 2.4.22 (For Ruby 2.7)
         run: |
-          gem install bundler -v 2.4.22
+          gem uninstall bundler -v ">=3" -aIx || true  # Ensure any Bundler 3.x is uninstalled
+          gem install bundler -v 2.4.22  # Force Bundler 2.4.22 installation
 
-      # Install dependencies
+      # Install dependencies (bundle install)
       - name: Install dependencies
         run: |
           bundle install
