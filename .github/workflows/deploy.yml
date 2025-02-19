@@ -39,4 +39,4 @@ jobs:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: ./_site  # This is where Jekyll builds the site
           publish_branch: gh-pages
-          destination_dir: preview/${{ github.event.pull_requ
+          destination_dir: preview/${{ github.event.pull_request.number }}
