@@ -16,21 +16,16 @@ jobs:
         with:
           fetch-depth: 1  # Only fetch the latest commit for efficiency
 
-      # Set up Ruby version 2.7.8 (compatible with Bundler 2.4.22)
-      - name: Set up Ruby 2.7.8
+      # Set up Ruby with version 3.1.x
+      - name: Set up Ruby 3.1.x
         uses: ruby/setup-ruby@v1
         with:
-          ruby-version: 2.7.8  # Use Ruby 2.7.x
+          ruby-version: 3.1  # Ensuring Ruby 3.1.x is used
 
-      # Uninstall any version of Bundler that's incompatible, then install Bundler 2.4.22 explicitly
-      - name: Force Install Bundler 2.4.22 (For Ruby 2.7)
-        run: |
-          gem uninstall bundler -v ">=3" -aIx || true  # Ensure any Bundler 3.x is uninstalled
-          gem install bundler -v 2.4.22  # Force Bundler 2.4.22 installation
-
-      # Install dependencies (bundle install)
+      # Install dependencies (this should work with Bundler 3.x now)
       - name: Install dependencies
         run: |
+          gem install bundler # Install latest Bundler (3.x) which is compatible with Ruby >= 3.1.0
           bundle install
 
       # Build the site
@@ -38,11 +33,11 @@ jobs:
         run: |
           bundle exec jekyll build
 
-      # Deploy to GitHub Pages
+      # Deploy to GitHub Pages Preview
       - name: Deploy to GitHub Pages Preview
         uses: peaceiris/actions-gh-pages@v3
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./_site  # This is where your built site lives (it might be different based on your setup)
-          publish_branch: gh-pages  # The branch that serves your GitHub Pages site
-          destination_dir: preview/${{ github.event.pull_request.number }}  # Deploy the PR to a specific folder under /preview/<pr-number>
+          publish_dir: ./_site  # Location of your built site
+          publish_branch: gh-pages  # GitHub Pages branch
+          destination_dir: preview/${{ github.event.pull_request.number }}  # Preview folder
