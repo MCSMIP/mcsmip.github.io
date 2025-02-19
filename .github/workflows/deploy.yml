@@ -2,43 +2,48 @@ name: Deploy PR Preview to GitHub Pages
 
 on:
   pull_request:
-    # This will trigger on PRs to any branch, not just "sidebar"
     branches:
-      - '*'  # This means "any branch" (wildcard for all branches)
+      - sidebar  # Replace with your PR branch name, or leave it as is to target all PRs
 
 jobs:
   deploy-preview:
     runs-on: ubuntu-latest
 
     steps:
-      # Step 1: Checkout the PR branch
+      # Check out the PR branch
       - name: Checkout PR branch
         uses: actions/checkout@v2
         with:
-          fetch-depth: 1  # Fetch only the latest commit for efficiency
+          fetch-depth: 1  # Only fetch the latest commit for efficiency
 
-      # Step 2: Set up Ruby (or adjust based on your site generator, e.g., Jekyll)
+      # Set up Ruby
       - name: Set up Ruby
         uses: ruby/setup-ruby@v1
         with:
-          ruby-version: 2.7  # Update Ruby version if needed for your Jekyll setup
+          ruby-version: 3.1.0  # You can use a higher Ruby version if necessary
 
-      # Step 3: Install dependencies (adjust based on your site generator)
+      # Install dependencies based on the Ruby version
       - name: Install dependencies
         run: |
-          gem install bundler
+          # Check Ruby version and install compatible Bundler version
+          RUBY_VERSION=$(ruby -v)
+          if [[ "$RUBY_VERSION" =~ 2.7 ]]; then
+            gem install bundler -v 2.4.22
+          else
+            gem install bundler
+          fi
           bundle install
 
-      # Step 4: Build the site using Jekyll (or your static site generator)
+      # Build the site
       - name: Build the site with Jekyll
         run: |
           bundle exec jekyll build
 
-      # Step 5: Deploy to GitHub Pages (PR Preview)
+      # Deploy to GitHub Pages
       - name: Deploy to GitHub Pages Preview
         uses: peaceiris/actions-gh-pages@v3
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./_site  # This is where your built site lives
-          publish_branch: gh-pages  # Branch where your GitHub Pages site is deployed
-          destination_dir: preview/${{ github.event.pull_request.number }}  # Unique subfolder for each PR, e.g., /preview/27
+          publish_dir: ./_site  # This is where your built site lives (it might be different based on your setup)
+          publish_branch: gh-pages  # The branch that serves your GitHub Pages site
+          destination_dir: preview/${{ github
