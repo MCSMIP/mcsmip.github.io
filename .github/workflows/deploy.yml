@@ -11,7 +11,7 @@ jobs:
     steps:
       # Checkout PR branch
       - name: Checkout PR branch
-        uses: actions/checkout@v2
+        uses: actions/checkout@v3
         with:
           fetch-depth: 1
 
@@ -19,7 +19,7 @@ jobs:
       - name: Set up Ruby
         uses: ruby/setup-ruby@v1
         with:
-          ruby-version: 2.7.8  # This is the specific Ruby version you need
+          ruby-version: 2.7.8  # Ensure using specific Ruby version
 
       # Install dependencies (Jekyll and Bundler)
       - name: Install dependencies
@@ -36,7 +36,7 @@ jobs:
       - name: Deploy to GitHub Pages Preview
         uses: peaceiris/actions-gh-pages@v3
         with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
+          github_token: ${{ secrets.GITHUB_TOKEN }}  # Using the GitHub token
           publish_dir: ./_site  # This is where Jekyll builds the site
           publish_branch: gh-pages
           destination_dir: preview/${{ github.event.pull_request.number }}
