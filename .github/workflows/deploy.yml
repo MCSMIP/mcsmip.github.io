@@ -19,24 +19,25 @@ jobs:
       - name: Set up Ruby
         uses: ruby/setup-ruby@v1
         with:
-          ruby-version: 2.7.8  # Ensure using specific Ruby version
+          ruby-version: 2.7.8
 
       # Install dependencies (Jekyll and Bundler)
       - name: Install dependencies
         run: |
-          gem install bundler -v 2.4.22  # Ensure using compatible bundler version
-          bundle install  # Install Jekyll and other gems
+          gem install bundler -v 2.4.22
+          bundle install
 
-      # Build the Jekyll site
+      # Build the Jekyll site with preview-specific baseurl
       - name: Build the site with Jekyll
         run: |
+          echo "baseurl: '/mcsmip.github.io/preview/${{ github.event.pull_request.number }}'" >> _config.yml
           bundle exec jekyll build
 
       # Deploy to GitHub Pages Preview
       - name: Deploy to GitHub Pages Preview
         uses: peaceiris/actions-gh-pages@v3
         with:
-          github_token: ${{ secrets.GH_TOKEN }}  # Using the GitHub token
-          publish_dir: ./_site  # This is where Jekyll builds the site
+          github_token: ${{ secrets.GH_TOKEN }}
+          publish_dir: ./_site
           publish_branch: gh-pages
           destination_dir: preview/${{ github.event.pull_request.number }}

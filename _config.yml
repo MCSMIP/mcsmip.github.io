@@ -19,7 +19,7 @@ title:            MCSMIP
 tagline:          'A cloud tracking intercomparison project'
 description:      'Mesoscale Convective Systems tracking Method Intercomparison'
 url:              http://hyde.getpoole.com
-baseurl:          "/mcsmip.github.io"  # Site hosted in a subdirectory
+baseurl:          "/"  # Site hosted in root directory
 
 
 remote_theme: "poole/hyde"
