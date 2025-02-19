@@ -34,4 +34,6 @@ github:
   
 plugins:
  - jekyll-feed
- - jekyll-remote-theme  
+ - jekyll-remote-theme
+ - jekyll-gist
+

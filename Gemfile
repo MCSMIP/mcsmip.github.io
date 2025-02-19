@@ -5,3 +5,4 @@ gem 'bundler', '2.4.22'
 gem 'jekyll-feed'  # Add this line to include the jekyll-feed gem
 gem 'jekyll-remote-theme'
 gem 'redcarpet'
+gem 'jekyll-gist'
