@@ -2,8 +2,8 @@ name: Deploy PR Preview to GitHub Pages
 
 on:
   pull_request:
-    branches:
-      - sidebar  # Replace with your PR branch name, or leave it as is to target all PRs
+    types: [opened, synchronize, reopened]
+
 
 jobs:
   deploy-preview:
